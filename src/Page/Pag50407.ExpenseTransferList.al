@@ -1,0 +1,57 @@
+//************************************************************************
+#pragma warning disable AA0005, AA0008, AA0018, AA0021, AA0072, AA0137, AA0201, AA0206, AA0218, AA0228, AL0424, AW0006 // ForNAV settings
+Page 50407 "Expense Transfer List"
+{
+    ApplicationArea = All;
+    CardPageID = "Expense Transfer Card";
+    PageType = List;
+    UsageCategory = Lists;
+    SourceTable = "Funds Transfer Header";
+    //SourceTableView = where(Posted = const(false));
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Group)
+            {
+                field("No.";Rec."No.")
+                {
+                }
+                field("Document Date";Rec."Document Date")
+                {
+                }
+                field("Posting Date";Rec."Posting Date")
+                {
+                }
+                field("Paying Bank Account";Rec."Paying Bank Account")
+                {
+                }
+                field("Paying Bank Name";Rec."Paying Bank Name")
+                {
+                }
+/*                 field("Amount to Transfer";Rec."Amount to Transfer")
+                {
+                }
+                field("Amount to Transfer(LCY)";Rec."Amount to Transfer(LCY)")
+                {
+                } */
+            }
+        }
+    }
+
+    actions
+    {
+    }
+
+    trigger OnNewRecord(BelowxRec: Boolean)
+    begin
+       // Rec."Pay Mode" := Rec."pay mode"::Cash
+    end;
+}
+
+
+
+
+
+

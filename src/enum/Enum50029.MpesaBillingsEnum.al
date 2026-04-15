@@ -1,0 +1,15 @@
+//************************************************************************
+enum 50029 "MpesaBillingsEnum"
+{
+    Extensible = true;
+
+    value(0; Member)
+    {
+    }
+    value(1; Vendor)
+    {
+
+    }
+}
+
+

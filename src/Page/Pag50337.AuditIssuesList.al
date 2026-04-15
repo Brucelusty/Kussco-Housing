@@ -1,0 +1,83 @@
+//************************************************************************
+#pragma warning disable AA0005, AA0008, AA0018, AA0021, AA0072, AA0137, AA0201, AA0206, AA0218, AA0228, AL0424, AW0006 // ForNAV settings
+Page 50337 "Audit Issues List"
+{
+    ApplicationArea = All;
+    CardPageID = "Audit Tracker Card";
+    Editable = false;
+    PageType = List;
+    UsageCategory = Lists;
+    SourceTable = "Audit Issues Tracker";
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Group)
+            {
+                field("Document No";Rec."Document No")
+                {
+                }
+                field("Date Of Audit";Rec."Date Of Audit")
+                {
+                }
+                field("Theme Description";Rec."Theme Description")
+                {
+                }
+                field("Mgt Action Point";Rec."Mgt Action Point")
+                {
+                }
+                field("Action Date";Rec."Action Date")
+                {
+                }
+                field("Day Past";Rec."Day Past")
+                {
+                }
+                field("Action Owner";Rec."Action Owner")
+                {
+                }
+                field(Status; Rec.Status)
+                {
+                }
+                field("Combined Status";Rec."Combined Status")
+                {
+                }
+                field("Mgt Response";Rec."Mgt Response")
+                {
+                }
+                field("Revised Mgt Comment";Rec."Revised Mgt Comment")
+                {
+                }
+                field("Audit Opinion On Closure";Rec."Audit Opinion On Closure")
+                {
+                }
+                field("Mgt Comment After Review";Rec."Mgt Comment After Review")
+                {
+                }
+            }
+        }
+    }
+
+    actions
+    {
+    }
+
+    trigger OnOpenPage()
+    begin
+        UserSetup.Reset;
+        UserSetup.SetRange(UserSetup."User ID", UserId);
+        if UserSetup.FindSet then begin
+            if UserSetup."Is Manager" = false then
+                Error('You do not have rights to view this page.');
+        end;
+    end;
+
+    var
+        UserSetup: Record "User Setup";
+}
+
+
+
+
+
+

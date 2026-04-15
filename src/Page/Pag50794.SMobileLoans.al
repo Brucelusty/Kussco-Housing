@@ -1,0 +1,78 @@
+//************************************************************************
+#pragma warning disable AA0005, AA0008, AA0018, AA0021, AA0072, AA0137, AA0201, AA0206, AA0218, AA0228, AL0424, AW0006 // ForNAV settings
+Page 50794 "S-Mobile Loans"
+{
+    ApplicationArea = All;
+    DeleteAllowed = false;
+    InsertAllowed = false;
+    ModifyAllowed = false;
+    PageType = List;
+    UsageCategory = Lists;
+    SourceTable = "Loans Register";
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Group)
+            {
+                field("Loan  No."; Rec."Loan  No.")
+                {
+                }
+                field("Application Date"; Rec."Application Date")
+                {
+                }
+                field("Loan Product Type"; Rec."Loan Product Type")
+                {
+                }
+                field("Client Code"; Rec."Client Code")
+                {
+                }
+                field("Outstanding Interest"; Rec."Outstanding Interest")
+                {
+                }
+                field("Outstanding Balance"; Rec."Outstanding Balance")
+                {
+                }
+                field(Posted; Rec.Posted)
+                {
+                }
+                field("Loan Status"; Rec."Loan Status")
+                {
+                }
+                field("Issued Date"; Rec."Issued Date")
+                {
+                }
+                field("Approved Amount"; Rec."Approved Amount")
+                {
+                }
+                field(Telephone; Telephone)
+                {
+                    Caption = 'Telephone';
+                }
+
+            }
+        }
+    }
+
+    actions
+    {
+    }
+
+    trigger OnAfterGetRecord()
+    begin
+        if Ltype.Get(Rec."Loan Product Type") then
+            "Loan Name" := Ltype."Product Description";
+    end;
+
+    var
+        Telephone: Code[30];
+        "Loan Name": Text[30];
+        Ltype: Record "Loan Products Setup";
+}
+
+
+
+
+
+

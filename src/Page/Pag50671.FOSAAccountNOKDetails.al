@@ -1,0 +1,79 @@
+//************************************************************************
+#pragma warning disable AA0005, AA0008, AA0018, AA0021, AA0072, AA0137, AA0201, AA0206, AA0218, AA0228, AL0424, AW0006 // ForNAV settings
+Page 50671 "FOSA Account  NOK Details"
+{
+    ApplicationArea = All;
+    PageType = ListPart;
+    SourceTable = "FOSA Account NOK Details";
+
+    layout
+    {
+        area(content)
+        {
+            repeater(Group)
+            {
+                field(Name; Rec.Name)
+                {
+                }
+                field(Relationship; Rec.Relationship)
+                {
+                }
+                field(Beneficiary; Rec.Beneficiary)
+                {
+                }
+                field("Date of Birth";Rec."Date of Birth")
+                {
+                }
+                field(Address; Rec.Address)
+                {
+                }
+                field(Telephone; Rec.Telephone)
+                {
+                }
+                field(Fax; Rec.Fax)
+                {
+                }
+                field(Email; Rec.Email)
+                {
+                }
+                field("ID No.";Rec."ID No.")
+                {
+                }
+                field("%Allocation";Rec."%Allocation")
+                {
+
+                    trigger OnValidate()
+                    begin
+                        Rec.CalcFields("Total Allocation");
+                        if Rec."%Allocation" > Rec."Maximun Allocation %" then
+                            Error(' Total allocation should be equal to 100 %');
+                    end;
+                }
+            }
+        }
+    }
+
+    actions
+    {
+    }
+
+    trigger OnAfterGetRecord()
+    begin
+        Rec."Maximun Allocation %" := 100;
+    end;
+
+    trigger OnOpenPage()
+    begin
+        Rec."Maximun Allocation %" := 100;
+    end;
+
+    var
+        NextKin: Record "Members Next of Kin";
+        TOTALALLO: Decimal;
+}
+
+
+
+
+
+
