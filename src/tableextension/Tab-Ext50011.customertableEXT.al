@@ -3376,6 +3376,24 @@ tableextension 50011 "customertableEXT" extends Customer
             ToolTip = 'Specifies whether the proposed property is owned by the member.';
 
         }
+        field(50606; "Contact Person Address"; Text[500])
+        {
+            Caption = 'Contact Person Address';
+            ToolTip = 'Specifies the address of the contact person for the member.';
+
+        }
+        field(50607; "Contact Person Postal Code"; Text[500])
+        {
+            Caption = 'Contact Person Postal Code';
+            ToolTip = 'Specifies the postal code of the contact person for the member.';
+
+        }
+        field(50608; "Contact Person Town"; Text[500])
+        {
+            Caption = 'Contact Person Town';
+            ToolTip = 'Specifies the town of the contact person for the member.';
+
+        }
 
 
 
