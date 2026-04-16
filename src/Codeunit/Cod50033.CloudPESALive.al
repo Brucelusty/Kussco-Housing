@@ -447,7 +447,7 @@ Codeunit 50033 "CloudPESALive"
             if Vendor.Find('-') then begin
                 MemberLedgerEntry.Reset;
                 MemberLedgerEntry.SetRange(MemberLedgerEntry."Customer No.", Vendor."BOSA Account No");
-                MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Benevolent Fund");
+                MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Dividend");
                 if MemberLedgerEntry.Find('-') then
                     repeat
                         amount := amount + MemberLedgerEntry.Amount;

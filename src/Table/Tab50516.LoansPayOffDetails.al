@@ -151,7 +151,7 @@ Table 50516 "Loans PayOff Details"
         {
             CalcFormula = sum("Member Ledger Entry".Amount where("Customer No." = field("Member No"),
                                                                   "Loan No" = field("Loan to PayOff"),
-                                                                  "Transaction Type" = filter("Insurance Contribution")));
+                                                                  "Transaction Type" = filter("Dividend")));
             FieldClass = FlowField;
         }
         field(10; "Outstanding Balance"; Decimal)

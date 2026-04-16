@@ -1925,7 +1925,7 @@ Table 50361 "Members Register"
         field(68083; "FOSA Outstanding Balance"; Decimal)
         {
             CalcFormula = sum("Member Ledger Entry".Amount where("Customer No." = field("No."),
-                                                                  "Transaction Type" = filter("Interest Paid" | "FOSA Shares")));
+                                                                  "Transaction Type" = filter("Interest Paid" |"Dividend")));
             FieldClass = FlowField;
         }
         field(68084; "FOSA Oustanding Interest"; Decimal)
@@ -2850,7 +2850,7 @@ Table 50361 "Members Register"
         {
             CalcFormula = sum("Member Ledger Entry".Amount where("Customer No." = field("No."),
                                                                   "Posting Date" = field("Date Filter"),
-                                                                  "Transaction Type" = filter("Benevolent Fund")));
+                                                                  "Transaction Type" = filter("Dividend")));
             FieldClass = FlowField;
         }
         field(69145; "Risk Fund Paid"; Decimal)
@@ -2881,7 +2881,7 @@ Table 50361 "Members Register"
         {
             CalcFormula = sum("Member Ledger Entry".Amount where("Customer No." = field("No."),
                                                                   "Posting Date" = field("Date Filter"),
-                                                                  "Transaction Type" = filter("Interest Paid" | "Deposit Contribution" | "Insurance Contribution")));
+                                                                  "Transaction Type" = filter("Interest Paid" | "Deposit Contribution" )));
             FieldClass = FlowField;
         }
         field(69151; "Last Deposit Contribution Date"; Date)//
@@ -3763,13 +3763,13 @@ Table 50361 "Members Register"
         field(690; "School Fees Shares"; Decimal)
         {
             FieldClass = FlowField;
-            CalcFormula = - Sum("Member Ledger Entry".Amount WHERE("Customer No." = FIELD("No."), "Transaction Type" = FILTER("SchFee Shares"), "Posting Date" = FIELD("Date Filter"), "Document No." = FIELD("Document No.")));
+            CalcFormula = - Sum("Member Ledger Entry".Amount WHERE("Customer No." = FIELD("No."), "Transaction Type" = FILTER("Dividend"), "Posting Date" = FIELD("Date Filter"), "Document No." = FIELD("Document No.")));
             Editable = false;
         }
         field(691; "Last Deposit Date Sch"; Date)
         {
             FieldClass = FlowField;
-            CalcFormula = Max("Member Ledger Entry"."Posting Date" WHERE("Transaction Type" = FILTER("SchFee Shares"), "Customer No." = FIELD("No.")));
+            CalcFormula = Max("Member Ledger Entry"."Posting Date" WHERE("Transaction Type" = FILTER("Dividend"), "Customer No." = FIELD("No.")));
         }
         field(692; "Last Deposit Date Deposit"; Date)
         {

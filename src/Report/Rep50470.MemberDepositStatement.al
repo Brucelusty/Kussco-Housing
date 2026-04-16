@@ -203,7 +203,7 @@ Report 50470 "Member Deposit Statement"
             dataitem(Benevolent; "Member Ledger Entry")															
             {															
                 DataItemLink = "Customer No." = field("No."), "Posting Date" = field("Date Filter");															
-                DataItemTableView = sorting("Transaction Type", "Loan No", "Posting Date") where("Transaction Type" = const("Benevolent Fund"), Reversed = filter(false));															
+                DataItemTableView = sorting("Transaction Type", "Loan No", "Posting Date") where("Transaction Type" = const("Dividend"), Reversed = filter(false));															
                 column(OpenBalancesBenFund; OpenBalanceBenfund)															
                 {															
                 }															
@@ -390,7 +390,7 @@ Report 50470 "Member Deposit Statement"
                         CLosingBalance := CLosingBalance + loan.Amount;															
                         if Loans."Loan  No." = '' then begin															
                         end;															
-                        if loan."Transaction Type" = loan."transaction type"::"Insurance Contribution" then begin															
+                        if loan."Transaction Type" = loan."transaction type"::"Dividend" then begin															
                             InterestPaid := loan."Credit Amount";															
                             SumInterestPaid := InterestPaid + SumInterestPaid;															
                         end;															
@@ -404,7 +404,7 @@ Report 50470 "Member Deposit Statement"
                 dataitem(Interest; "Member Ledger Entry")															
                 {															
                     DataItemLink = "Customer No." = field("Client Code"), "Loan No" = field("Loan  No."), "Posting Date" = field("Date filter");															
-                    DataItemTableView = sorting("Transaction Type", "Loan No", "Posting Date") where("Transaction Type" = filter("Deposit Contribution" | "Insurance Contribution"), "Loan No" = filter(<> ''), Description = filter(<> 'Interest on salary advance'));															
+                    DataItemTableView = sorting("Transaction Type", "Loan No", "Posting Date") where("Transaction Type" = filter("Deposit Contribution" | "Dividend"), "Loan No" = filter(<> ''), Description = filter(<> 'Interest on salary advance'));															
 															
                     column(PostingDate_Interest; Interest."Posting Date")															
                     {															

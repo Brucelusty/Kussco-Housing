@@ -994,7 +994,7 @@ report 50775 "Dividend Prorated New"
         MemberL.SETRANGE(MemberL."Customer No.", MemberNo);
         MemberL.SETRANGE(MemberL.Reversed, FALSE);
         MemberL.SETFILTER(MemberL.Amount, '>%1', 0);
-        MemberL.SETFILTER(MemberL."Transaction Type", '%1', MemberL."Transaction Type"::"SchFee Shares");
+        MemberL.SETFILTER(MemberL."Transaction Type", '%1', MemberL."Transaction Type"::"Dividend");
         MemberL.SETFILTER(MemberL."Posting Date", '%1..%2', StartDate, EndDate);
         IF MemberL.FINDSET THEN BEGIN
             Withdrawal := MemberL.Amount;

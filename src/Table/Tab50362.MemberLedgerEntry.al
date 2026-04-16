@@ -455,11 +455,10 @@ Table 50362 "Member Ledger Entry"
         {
             Caption = 'Prepayment';
         }
-        field(68000; "Transaction Type"; Option)
+        field(68000; "Transaction Type"; Enum TransactionTypesEnum)
         {
-            OptionCaption = ' ,Registration Fee,Loan,Repayment,Withdrawal,Interest Due,Interest Paid,Benevolent Fund,Deposit Contribution,Penalty Charged,Application Fee,Appraisal Fee,Investment,Unallocated Funds,Shares Capital,Loan Adjustment,Dividend,Withholding Tax,Administration Fee,Insurance Contribution,Prepayment,Withdrawable Deposits,Xmas Contribution,Penalty Paid,Dev Shares,Co-op Shares,Welfare Contribution 2,Loan Penalty,Loan Guard,Lukenya,Konza,Juja,Housing Water,Housing Title,Housing Main,M Pesa Charge ,Insurance Charge,Insurance Paid,FOSA Account,Partial Disbursement,Loan Due,FOSA Shares,Loan Form Fee,PassBook Fee,Normal shares,SchFee Shares,Principle Unallocated,Interest Unallocated';
-            OptionMembers = " ","Registration Fee",Loan,Repayment,Withdrawal,"Interest Due","Interest Paid","Benevolent Fund","Deposit Contribution","Penalty Charged","Application Fee","Appraisal Fee",Investment,"Unallocated Funds","Shares Capital","Loan Adjustment",Dividend,"Withholding Tax","Administration Fee","Insurance Contribution",Prepayment,"Withdrawable Deposits","Xmas Contribution","Penalty Paid","Dev Shares","Co-op Shares","Welfare Contribution 2","Loan Penalty","Loan Guard",Lukenya,Konza,Juja,"Housing Water","Housing Title","Housing Main","M Pesa Charge" ,"Insurance Charge","Insurance Paid","FOSA Account","Partial Disbursement","Loan Due","FOSA Shares","Loan Form Fee","PassBook Fee","Normal shares","SchFee Shares","Principle Unallocated","Interest Unallocated";
-        }
+Caption = 'Transaction Type';
+        }   
         field(68001; "Loan No"; Code[20])
         {
         }
@@ -500,7 +499,7 @@ Table 50362 "Member Ledger Entry"
         }
         field(68011; "Total Debits"; Decimal)
         {
-            CalcFormula = sum("Member Ledger Entry".Amount where("Transaction Type" = filter("Shares Capital"),
+            CalcFormula = sum("Member Ledger Entry".Amount where("Transaction Type" = filter("Share Capital"),
                                                                   "Loan Type" = field("Loan Type"),
                                                                   "Posting Date" = field("Posting Date")));
             FieldClass = FlowField;
@@ -566,6 +565,12 @@ Table 50362 "Member Ledger Entry"
         field(51516066; "Member House Group"; Code[30])
         {
         }
+        field(51516067; "Activity Type"; Enum "Member Activity Type")
+        {
+        }
+
+
+
     }
 
     keys

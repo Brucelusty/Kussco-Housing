@@ -882,7 +882,7 @@ tableextension 50004 "VendorExtension" extends Vendor
         field(50151; "Outstanding Interest"; Decimal)
         {
             CalcFormula = Sum("Member Ledger Entry".Amount WHERE("FOSA Account No." = FIELD("No."),
-                                                                  "Transaction Type" = FILTER("Deposit Contribution" | "Insurance Contribution"),
+                                                                  "Transaction Type" = FILTER("Deposit Contribution" | "Dividend"),
                                                                   "Posting Date" = FIELD("Date Filter")));
             FieldClass = FlowField;
         }

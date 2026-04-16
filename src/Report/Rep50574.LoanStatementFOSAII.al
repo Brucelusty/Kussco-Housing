@@ -174,7 +174,7 @@ Report 50574 "Loan Statement-FOSA II"
                         CLosingBalance := CLosingBalance + loan.Amount;															
                         if Loans."Loan  No." = '' then begin															
                         end;															
-                        if loan."Transaction Type" = loan."transaction type"::"Insurance Contribution" then begin															
+                        if loan."Transaction Type" = loan."transaction type"::"Dividend" then begin															
                             InterestPaid := loan."Credit Amount";															
                             SumInterestPaid := InterestPaid + SumInterestPaid;															
                         end;															

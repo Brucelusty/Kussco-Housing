@@ -441,7 +441,7 @@ Codeunit 50038 "CloudPESALivetest"
                     MemberLedgerEntry.Ascending(false);
                     MemberLedgerEntry.SetRange(MemberLedgerEntry."Customer No.", Account);
                     MemberLedgerEntry.SetRange(MemberLedgerEntry.Reversed, false);
-                    MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Shares Capital");
+                    MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Share Capital");
                     Mrowcount := MemberLedgerEntry.Count;
                     if MemberLedgerEntry.Find('-') then begin
                         repeat
@@ -2024,7 +2024,7 @@ Codeunit 50038 "CloudPESALivetest"
             if Members.Find('-') then begin
                 MemberLedgerEntry.Reset;
                 MemberLedgerEntry.SetRange(MemberLedgerEntry."Customer No.", Members."No.");
-                MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Benevolent Fund");
+                MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Dividend");
                 if MemberLedgerEntry.Find('-') then begin
                     repeat
                         bvamount := bvamount + MemberLedgerEntry.Amount;
@@ -2084,7 +2084,7 @@ Codeunit 50038 "CloudPESALivetest"
             if Members.Find('-') then begin
                 MemberLedgerEntry.Reset;
                 MemberLedgerEntry.SetRange(MemberLedgerEntry."Customer No.", Members."No.");
-                MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Shares Capital");
+                MemberLedgerEntry.SetRange(MemberLedgerEntry."Transaction Type", MemberLedgerEntry."transaction type"::"Share Capital");
                 if MemberLedgerEntry.Find('-') then begin
                     repeat
                         samount := samount + MemberLedgerEntry.Amount;

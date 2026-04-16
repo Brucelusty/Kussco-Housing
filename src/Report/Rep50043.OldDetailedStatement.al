@@ -58,7 +58,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = CONST("Shares Capital"),
+                                    WHERE("Transaction Type" = CONST("Share Capital"),
                                           Reversed = FILTER(false));
                 RequestFilterFields = "Posting Date";
                 column(openBalances; OpenBalance)
@@ -111,7 +111,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = CONST("Co-op Shares"),
+                                    WHERE("Transaction Type" = CONST("Dividend"),
                                           Reversed = FILTER(false));
                 column(OpenBalanceCoop; OpenBalanceCoop)
                 {
@@ -217,7 +217,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = CONST(Konza),
+                                    WHERE("Transaction Type" = CONST("Dividend"),
                                           Reversed = FILTER(false));
                 column(OpenBalancesJuja; OpenBalanceJuja)
                 {
@@ -266,7 +266,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = CONST("Co-op Shares"),
+                                    WHERE("Transaction Type" = CONST("Dividend"),
                                           Reversed = FILTER(false));
                 column(OpenBalancesHse; OpenBalanceHse)
                 {
@@ -315,7 +315,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = CONST(Lukenya),
+                                    WHERE("Transaction Type" = CONST("Dividend"),
                                           Reversed = FILTER(false));
                 column(OpenBalancesKonza; OpenBalanceHse)
                 {
@@ -364,7 +364,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = CONST(Lukenya),
+                                    WHERE("Transaction Type" = CONST("Dividend"),
                                           Reversed = FILTER(false));
                 column(OpenBalancesLukenya; OpenBalanceHse)
                 {
@@ -413,7 +413,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = CONST("Xmas Contribution"),
+                                    WHERE("Transaction Type" = CONST("Dividend"),
                                           Reversed = FILTER(false));
                 column(OpenBalancesDep1; OpenBalanceDep1)
                 {
@@ -462,7 +462,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Transaction Type", "Loan No", "Posting Date")
-                                    WHERE("Transaction Type" = FILTER("Housing Title"),
+                                    WHERE("Transaction Type" = FILTER("Dividend"),
                                           Reversed = FILTER(false));
                 column(OpenBalancesDep2; OpenBalanceDep2)
                 {
@@ -511,7 +511,7 @@ report 50043 "Old Detailed  Statement"
                 DataItemLink = "Customer No." = FIELD("No."),
                                "Posting Date" = FIELD("Date Filter");
                 DataItemTableView = SORTING("Posting Date")
-                                    WHERE("Transaction Type" = CONST("SchFee Shares"),
+                                    WHERE("Transaction Type" = CONST("Dividend"),
                                           Reversed = FILTER(false));
                 PrintOnlyIfDetail = false;
                 column(OpeningBalSF; OpenBalanceSF)

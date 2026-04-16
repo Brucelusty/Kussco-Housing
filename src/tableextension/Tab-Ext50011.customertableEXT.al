@@ -3164,7 +3164,7 @@ tableextension 50011 "customertableEXT" extends Customer
         field(50564; "Last Deposit Date Sch"; Date)
         {
             FieldClass = FlowField;
-            CalcFormula = Max("Member Ledger Entry"."Posting Date" WHERE("Transaction Type" = FILTER("SchFee Shares"), "Customer No." = FIELD("No.")));
+            CalcFormula = Max("Member Ledger Entry"."Posting Date" WHERE("Transaction Type" = FILTER("Dividend"), "Customer No." = FIELD("No.")));
         }
         field(50565; "Last Deposit Date Deposit"; Date)
         {
