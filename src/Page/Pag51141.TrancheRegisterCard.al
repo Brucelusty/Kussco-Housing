@@ -19,7 +19,7 @@ page 51141 "Tranche Register Card"
                 {
                 }
 
-                field("Document Date"; Rec."Document Date")
+                field("Application Date"; Rec."Application Date")
                 {
                 }
 
@@ -28,6 +28,9 @@ page 51141 "Tranche Register Card"
                 }
 
                 field("Client Name"; Rec."Client Name")
+                {
+                }
+                field("Document Date"; Rec."Document Date")
                 {
                 }
                 field(Description; Rec.Description)
@@ -73,6 +76,7 @@ page 51141 "Tranche Register Card"
                 begin
                     //  if Rec.Posted then
                     //   Error('Document already posted.');
+                    Rec.TestField("Document Date");
 
                     // Validate at least one line
                     TrancheRec.Reset();
@@ -97,7 +101,7 @@ page 51141 "Tranche Register Card"
                             TrancheRec.SetRange(TrancheRec.Select, true);
                             TrancheRec.SetRange(TrancheRec.Posted, false);
                             if TrancheRec.FindFirst() then begin
-                                Message('Here%1', TrancheRec."Tranche Amount");
+                                // Message('Here%1', TrancheRec."Tranche Amount");
                                 FnDisburseToBankAccount(LoansReg);
 
                                 //CU posting                                    
@@ -115,6 +119,7 @@ page 51141 "Tranche Register Card"
                         end;
                         // Mark header as posted
                         Rec.Posted := true;
+                        Rec."Posting Date" := Today;
                         Rec."Posted By" := UserId;
                         Rec.Modify();
                         Message('Tranche document posted successfully.');
@@ -164,7 +169,7 @@ page 51141 "Tranche Register Card"
             //------------------------------------1. DEBIT MEMBER LOAN A/C---------------------------------------------------------------------------------------------
             LineNo := LineNo + 10000;
             SFactory.FnCreateGnlJournalLine(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."transaction type"::Loan,
-            GenJournalLine."account type"::Customer, LoanApps."Client Code", Today, VarAmounttoDisburse, Format(LoanApps.Source), LoanApps."Loan  No.",
+            GenJournalLine."account type"::Customer, LoanApps."Client Code", Rec."Document Date", VarAmounttoDisburse, Format(LoanApps.Source), LoanApps."Loan  No.",
             'Loan Disbursement - ' + LoanApps."Loan Product Type Name", LoanApps."Loan  No.", GenJournalLine."application source"::" ");
             //--------------------------------(Debit Member Loan Account)---------------------------------------------
 
@@ -172,7 +177,7 @@ page 51141 "Tranche Register Card"
             //------------------------------------2. CREDIT MEMBER BANK A/C---------------------------------------------------------------------------------------------
             LineNo := LineNo + 10000;
             SFactory.FnCreateGnlJournalLine(BATCH_TEMPLATE, BATCH_NAME, DOCUMENT_NO, LineNo, GenJournalLine."transaction type"::" ",
-            GenJournalLine."account type"::"Bank Account", LoanApps."Paying Bank Account No", Today, VarAmounttoDisburse * -1, '', LoanApps."Cheque No.",
+            GenJournalLine."account type"::"Bank Account", LoanApps."Paying Bank Account No", Rec."Document Date", VarAmounttoDisburse * -1, '', LoanApps."Cheque No.",
             'Loan Disbursement - ' + LoanApps."Loan Product Type Name" + ' - ' + LoanApps."Loan  No.", LoanApps."Loan  No.", GenJournalLine."application source"::" ");
             //----------------------------------(Credit Member Bank Account)------------------------------------------------
 

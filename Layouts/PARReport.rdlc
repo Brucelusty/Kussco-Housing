@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Total_Performing">
+          <DataField>Total_Performing</DataField>
+        </Field>
+        <Field Name="Total_PerformingFormat">
+          <DataField>Total_PerformingFormat</DataField>
+        </Field>
+        <Field Name="Total_Watch">
+          <DataField>Total_Watch</DataField>
+        </Field>
+        <Field Name="Total_WatchFormat">
+          <DataField>Total_WatchFormat</DataField>
+        </Field>
+        <Field Name="Total_Substandard">
+          <DataField>Total_Substandard</DataField>
+        </Field>
+        <Field Name="Total_SubstandardFormat">
+          <DataField>Total_SubstandardFormat</DataField>
+        </Field>
+        <Field Name="Total_Doubtful">
+          <DataField>Total_Doubtful</DataField>
+        </Field>
+        <Field Name="Total_DoubtfulFormat">
+          <DataField>Total_DoubtfulFormat</DataField>
+        </Field>
+        <Field Name="Total_Loss">
+          <DataField>Total_Loss</DataField>
+        </Field>
+        <Field Name="Total_LossFormat">
+          <DataField>Total_LossFormat</DataField>
+        </Field>
+        <Field Name="Performing_Provision">
+          <DataField>Performing_Provision</DataField>
+        </Field>
+        <Field Name="Performing_ProvisionFormat">
+          <DataField>Performing_ProvisionFormat</DataField>
+        </Field>
+        <Field Name="Watch_Provision">
+          <DataField>Watch_Provision</DataField>
+        </Field>
+        <Field Name="Watch_ProvisionFormat">
+          <DataField>Watch_ProvisionFormat</DataField>
+        </Field>
+        <Field Name="Substandard_Provision">
+          <DataField>Substandard_Provision</DataField>
+        </Field>
+        <Field Name="Substandard_ProvisionFormat">
+          <DataField>Substandard_ProvisionFormat</DataField>
+        </Field>
+        <Field Name="Doubtful_Provision">
+          <DataField>Doubtful_Provision</DataField>
+        </Field>
+        <Field Name="Doubtful_ProvisionFormat">
+          <DataField>Doubtful_ProvisionFormat</DataField>
+        </Field>
+        <Field Name="Loss_Provision">
+          <DataField>Loss_Provision</DataField>
+        </Field>
+        <Field Name="Loss_ProvisionFormat">
+          <DataField>Loss_ProvisionFormat</DataField>
+        </Field>
+        <Field Name="Total_Loan">
+          <DataField>Total_Loan</DataField>
+        </Field>
+        <Field Name="Total_LoanFormat">
+          <DataField>Total_LoanFormat</DataField>
+        </Field>
+        <Field Name="Total_Provisioning">
+          <DataField>Total_Provisioning</DataField>
+        </Field>
+        <Field Name="Total_ProvisioningFormat">
+          <DataField>Total_ProvisioningFormat</DataField>
+        </Field>
+        <Field Name="PAR_Ratio">
+          <DataField>PAR_Ratio</DataField>
+        </Field>
+        <Field Name="PAR_RatioFormat">
+          <DataField>PAR_RatioFormat</DataField>
+        </Field>
+        <Field Name="Loan_Product">
+          <DataField>Loan_Product</DataField>
+        </Field>
+        <Field Name="loanTypename">
+          <DataField>loanTypename</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

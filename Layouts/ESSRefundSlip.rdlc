@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ESSRef_No_">
+          <DataField>ESSRef_No_</DataField>
+        </Field>
+        <Field Name="Member_No">
+          <DataField>Member_No</DataField>
+        </Field>
+        <Field Name="Member_Name">
+          <DataField>Member_Name</DataField>
+        </Field>
+        <Field Name="ESS_Account">
+          <DataField>ESS_Account</DataField>
+        </Field>
+        <Field Name="ESS_Refund">
+          <DataField>ESS_Refund</DataField>
+        </Field>
+        <Field Name="ESS_RefundFormat">
+          <DataField>ESS_RefundFormat</DataField>
+        </Field>
+        <Field Name="Early_Refund">
+          <DataField>Early_Refund</DataField>
+        </Field>
+        <Field Name="PF_No">
+          <DataField>PF_No</DataField>
+        </Field>
+        <Field Name="Refunded">
+          <DataField>Refunded</DataField>
+        </Field>
+        <Field Name="Captured_On">
+          <DataField>Captured_On</DataField>
+        </Field>
+        <Field Name="Registered_On">
+          <DataField>Registered_On</DataField>
+        </Field>
+        <Field Name="Maturing_On">
+          <DataField>Maturing_On</DataField>
+        </Field>
+        <Field Name="company_Pic">
+          <DataField>company_Pic</DataField>
+        </Field>
+        <Field Name="company_Name">
+          <DataField>company_Name</DataField>
+        </Field>
+        <Field Name="company_Address">
+          <DataField>company_Address</DataField>
+        </Field>
+        <Field Name="company_Phone">
+          <DataField>company_Phone</DataField>
+        </Field>
+        <Field Name="company_Email">
+          <DataField>company_Email</DataField>
+        </Field>
+        <Field Name="company_Motto">
+          <DataField>company_Motto</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

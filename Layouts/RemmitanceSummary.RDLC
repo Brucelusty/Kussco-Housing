@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Employees">
+          <DataField>Employees</DataField>
+        </Field>
+        <Field Name="EmployerCode">
+          <DataField>EmployerCode</DataField>
+        </Field>
+        <Field Name="EmployerName">
+          <DataField>EmployerName</DataField>
+        </Field>
+        <Field Name="LoanRepayments">
+          <DataField>LoanRepayments</DataField>
+        </Field>
+        <Field Name="LoanRepaymentsFormat">
+          <DataField>LoanRepaymentsFormat</DataField>
+        </Field>
+        <Field Name="OrdContrib">
+          <DataField>OrdContrib</DataField>
+        </Field>
+        <Field Name="OrdContribFormat">
+          <DataField>OrdContribFormat</DataField>
+        </Field>
+        <Field Name="ESSContrib">
+          <DataField>ESSContrib</DataField>
+        </Field>
+        <Field Name="ESSContribFormat">
+          <DataField>ESSContribFormat</DataField>
+        </Field>
+        <Field Name="FDContrib">
+          <DataField>FDContrib</DataField>
+        </Field>
+        <Field Name="FDContribFormat">
+          <DataField>FDContribFormat</DataField>
+        </Field>
+        <Field Name="OtherFosaContrib">
+          <DataField>OtherFosaContrib</DataField>
+        </Field>
+        <Field Name="OtherFosaContribFormat">
+          <DataField>OtherFosaContribFormat</DataField>
+        </Field>
+        <Field Name="TotDepositContrib">
+          <DataField>TotDepositContrib</DataField>
+        </Field>
+        <Field Name="TotDepositContribFormat">
+          <DataField>TotDepositContribFormat</DataField>
+        </Field>
+        <Field Name="DepositContrib">
+          <DataField>DepositContrib</DataField>
+        </Field>
+        <Field Name="DepositContribFormat">
+          <DataField>DepositContribFormat</DataField>
+        </Field>
+        <Field Name="TotESSContrib">
+          <DataField>TotESSContrib</DataField>
+        </Field>
+        <Field Name="TotESSContribFormat">
+          <DataField>TotESSContribFormat</DataField>
+        </Field>
+        <Field Name="TotOrdContrib">
+          <DataField>TotOrdContrib</DataField>
+        </Field>
+        <Field Name="TotOrdContribFormat">
+          <DataField>TotOrdContribFormat</DataField>
+        </Field>
+        <Field Name="TotLoanRepayments">
+          <DataField>TotLoanRepayments</DataField>
+        </Field>
+        <Field Name="TotLoanRepaymentsFormat">
+          <DataField>TotLoanRepaymentsFormat</DataField>
+        </Field>
+        <Field Name="TotOtherFosaContrib">
+          <DataField>TotOtherFosaContrib</DataField>
+        </Field>
+        <Field Name="TotOtherFosaContribFormat">
+          <DataField>TotOtherFosaContribFormat</DataField>
+        </Field>
+        <Field Name="TotFDContrib">
+          <DataField>TotFDContrib</DataField>
+        </Field>
+        <Field Name="TotFDContribFormat">
+          <DataField>TotFDContribFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

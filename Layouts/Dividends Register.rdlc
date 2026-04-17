@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_Members">
+          <DataField>No_Members</DataField>
+        </Field>
+        <Field Name="Name_Members">
+          <DataField>Name_Members</DataField>
+        </Field>
+        <Field Name="Shares_Retained">
+          <DataField>Shares_Retained</DataField>
+        </Field>
+        <Field Name="Shares_RetainedFormat">
+          <DataField>Shares_RetainedFormat</DataField>
+        </Field>
+        <Field Name="Current_Shares">
+          <DataField>Current_Shares</DataField>
+        </Field>
+        <Field Name="Current_SharesFormat">
+          <DataField>Current_SharesFormat</DataField>
+        </Field>
+        <Field Name="GrossDividends_Members">
+          <DataField>GrossDividends_Members</DataField>
+        </Field>
+        <Field Name="GrossDividends_MembersFormat">
+          <DataField>GrossDividends_MembersFormat</DataField>
+        </Field>
+        <Field Name="WtaxDividends_Members">
+          <DataField>WtaxDividends_Members</DataField>
+        </Field>
+        <Field Name="WtaxDividends_MembersFormat">
+          <DataField>WtaxDividends_MembersFormat</DataField>
+        </Field>
+        <Field Name="NetDividends_Members">
+          <DataField>NetDividends_Members</DataField>
+        </Field>
+        <Field Name="NetDividends_MembersFormat">
+          <DataField>NetDividends_MembersFormat</DataField>
+        </Field>
+        <Field Name="GrossInterest_Members">
+          <DataField>GrossInterest_Members</DataField>
+        </Field>
+        <Field Name="GrossInterest_MembersFormat">
+          <DataField>GrossInterest_MembersFormat</DataField>
+        </Field>
+        <Field Name="WtaxInterest_Members">
+          <DataField>WtaxInterest_Members</DataField>
+        </Field>
+        <Field Name="WtaxInterest_MembersFormat">
+          <DataField>WtaxInterest_MembersFormat</DataField>
+        </Field>
+        <Field Name="NetInterest_Members">
+          <DataField>NetInterest_Members</DataField>
+        </Field>
+        <Field Name="NetInterest_MembersFormat">
+          <DataField>NetInterest_MembersFormat</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="CompCity">
+          <DataField>CompCity</DataField>
+        </Field>
+        <Field Name="CompPicture">
+          <DataField>CompPicture</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="TotalDividends_Members">
+          <DataField>TotalDividends_Members</DataField>
+        </Field>
+        <Field Name="TotalDividends_MembersFormat">
+          <DataField>TotalDividends_MembersFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

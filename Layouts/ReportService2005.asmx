@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><soap:Body><ListSecureMethods xmlns="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" /></soap:Body></soap:Envelope>

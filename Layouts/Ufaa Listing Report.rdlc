@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="companyPicture">
+          <DataField>companyPicture</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyPhoneNo">
+          <DataField>CompanyPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyEmail">
+          <DataField>CompanyEmail</DataField>
+        </Field>
+        <Field Name="No_UFAABuffer">
+          <DataField>No_UFAABuffer</DataField>
+        </Field>
+        <Field Name="MemberNo_UFAABuffer">
+          <DataField>MemberNo_UFAABuffer</DataField>
+        </Field>
+        <Field Name="FOSAAccount_UFAABuffer">
+          <DataField>FOSAAccount_UFAABuffer</DataField>
+        </Field>
+        <Field Name="MobileNumber_UFAABuffer">
+          <DataField>MobileNumber_UFAABuffer</DataField>
+        </Field>
+        <Field Name="IDNumber_UFAABuffer">
+          <DataField>IDNumber_UFAABuffer</DataField>
+        </Field>
+        <Field Name="WithdrawalNoticeDate_UFAABuffer">
+          <DataField>WithdrawalNoticeDate_UFAABuffer</DataField>
+        </Field>
+        <Field Name="Source_UFAABuffer">
+          <DataField>Source_UFAABuffer</DataField>
+        </Field>
+        <Field Name="Shares">
+          <DataField>Shares</DataField>
+        </Field>
+        <Field Name="SharesFormat">
+          <DataField>SharesFormat</DataField>
+        </Field>
+        <Field Name="Deposits_UFAABuffer">
+          <DataField>Deposits_UFAABuffer</DataField>
+        </Field>
+        <Field Name="Deposits_UFAABufferFormat">
+          <DataField>Deposits_UFAABufferFormat</DataField>
+        </Field>
+        <Field Name="Serial">
+          <DataField>Serial</DataField>
+        </Field>
+        <Field Name="FosaBalance_UFAABuffer">
+          <DataField>FosaBalance_UFAABuffer</DataField>
+        </Field>
+        <Field Name="FosaBalance_UFAABufferFormat">
+          <DataField>FosaBalance_UFAABufferFormat</DataField>
+        </Field>
+        <Field Name="SchoolFeesDeposits_UFAABuffer">
+          <DataField>SchoolFeesDeposits_UFAABuffer</DataField>
+        </Field>
+        <Field Name="SchoolFeesDeposits_UFAABufferFormat">
+          <DataField>SchoolFeesDeposits_UFAABufferFormat</DataField>
+        </Field>
+        <Field Name="Chamaa">
+          <DataField>Chamaa</DataField>
+        </Field>
+        <Field Name="ChamaaFormat">
+          <DataField>ChamaaFormat</DataField>
+        </Field>
+        <Field Name="Jibambe">
+          <DataField>Jibambe</DataField>
+        </Field>
+        <Field Name="JibambeFormat">
+          <DataField>JibambeFormat</DataField>
+        </Field>
+        <Field Name="Wezesha">
+          <DataField>Wezesha</DataField>
+        </Field>
+        <Field Name="WezeshaFormat">
+          <DataField>WezeshaFormat</DataField>
+        </Field>
+        <Field Name="FixedDep">
+          <DataField>FixedDep</DataField>
+        </Field>
+        <Field Name="FixedDepFormat">
+          <DataField>FixedDepFormat</DataField>
+        </Field>
+        <Field Name="Mdosi">
+          <DataField>Mdosi</DataField>
+        </Field>
+        <Field Name="MdosiFormat">
+          <DataField>MdosiFormat</DataField>
+        </Field>
+        <Field Name="PensionAkiba">
+          <DataField>PensionAkiba</DataField>
+        </Field>
+        <Field Name="PensionAkibaFormat">
+          <DataField>PensionAkibaFormat</DataField>
+        </Field>
+        <Field Name="BusinessAct">
+          <DataField>BusinessAct</DataField>
+        </Field>
+        <Field Name="BusinessActFormat">
+          <DataField>BusinessActFormat</DataField>
+        </Field>
+        <Field Name="AccountType_UFAABuffer">
+          <DataField>AccountType_UFAABuffer</DataField>
+        </Field>
+        <Field Name="MembersName_UFAABuffer">
+          <DataField>MembersName_UFAABuffer</DataField>
+        </Field>
+        <Field Name="LastTransactionDate_UFAABuffer">
+          <DataField>LastTransactionDate_UFAABuffer</DataField>
+        </Field>
+        <Field Name="MemberPF_UFAABuffer">
+          <DataField>MemberPF_UFAABuffer</DataField>
+        </Field>
+        <Field Name="EmployerCode">
+          <DataField>EmployerCode</DataField>
+        </Field>
+        <Field Name="Withdrawal_Notice_Date">
+          <DataField>Withdrawal_Notice_Date</DataField>
+        </Field>
+        <Field Name="Activity">
+          <DataField>Activity</DataField>
+        </Field>
+        <Field Name="Last_Transact_Date_Ordinary">
+          <DataField>Last_Transact_Date_Ordinary</DataField>
+        </Field>
+        <Field Name="Last_Ord_Transact_Description">
+          <DataField>Last_Ord_Transact_Description</DataField>
+        </Field>
+        <Field Name="Old_Last_Date">
+          <DataField>Old_Last_Date</DataField>
+        </Field>
+        <Field Name="Old_Last_Description">
+          <DataField>Old_Last_Description</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

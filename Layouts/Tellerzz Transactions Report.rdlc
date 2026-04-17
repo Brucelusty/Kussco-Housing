@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="CashierID">
+          <DataField>CashierID</DataField>
+        </Field>
+        <Field Name="treasury_No">
+          <DataField>treasury_No</DataField>
+        </Field>
+        <Field Name="treasury_fromAcc">
+          <DataField>treasury_fromAcc</DataField>
+        </Field>
+        <Field Name="treasury_toAcc">
+          <DataField>treasury_toAcc</DataField>
+        </Field>
+        <Field Name="treas_tDate">
+          <DataField>treas_tDate</DataField>
+        </Field>
+        <Field Name="treas_tTime">
+          <DataField>treas_tTime</DataField>
+        </Field>
+        <Field Name="treasury_tType">
+          <DataField>treasury_tType</DataField>
+        </Field>
+        <Field Name="treasury_Desc">
+          <DataField>treasury_Desc</DataField>
+        </Field>
+        <Field Name="treasury_Amount">
+          <DataField>treasury_Amount</DataField>
+        </Field>
+        <Field Name="treasury_AmountFormat">
+          <DataField>treasury_AmountFormat</DataField>
+        </Field>
+        <Field Name="treasury_tillBal">
+          <DataField>treasury_tillBal</DataField>
+        </Field>
+        <Field Name="treasury_tillBalFormat">
+          <DataField>treasury_tillBalFormat</DataField>
+        </Field>
+        <Field Name="treasury_actualTillBal">
+          <DataField>treasury_actualTillBal</DataField>
+        </Field>
+        <Field Name="treasury_actualTillBalFormat">
+          <DataField>treasury_actualTillBalFormat</DataField>
+        </Field>
+        <Field Name="trans_Date">
+          <DataField>trans_Date</DataField>
+        </Field>
+        <Field Name="opening_Bal">
+          <DataField>opening_Bal</DataField>
+        </Field>
+        <Field Name="opening_BalFormat">
+          <DataField>opening_BalFormat</DataField>
+        </Field>
+        <Field Name="closing_Bal">
+          <DataField>closing_Bal</DataField>
+        </Field>
+        <Field Name="closing_BalFormat">
+          <DataField>closing_BalFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

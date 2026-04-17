@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="ReportForNavId_1">
+          <DataField>ReportForNavId_1</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="Surname">
+          <DataField>Surname</DataField>
+        </Field>
+        <Field Name="Firstname">
+          <DataField>Firstname</DataField>
+        </Field>
+        <Field Name="MIddle">
+          <DataField>MIddle</DataField>
+        </Field>
+        <Field Name="Annualleave">
+          <DataField>Annualleave</DataField>
+        </Field>
+        <Field Name="AnnualleaveFormat">
+          <DataField>AnnualleaveFormat</DataField>
+        </Field>
+        <Field Name="CompassionateLeaveAcc_HREmployees">
+          <DataField>CompassionateLeaveAcc_HREmployees</DataField>
+        </Field>
+        <Field Name="CompassionateLeaveAcc_HREmployeesFormat">
+          <DataField>CompassionateLeaveAcc_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="MaternityLeaveAcc_HREmployees">
+          <DataField>MaternityLeaveAcc_HREmployees</DataField>
+        </Field>
+        <Field Name="MaternityLeaveAcc_HREmployeesFormat">
+          <DataField>MaternityLeaveAcc_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="PaternityLeaveAcc_HREmployees">
+          <DataField>PaternityLeaveAcc_HREmployees</DataField>
+        </Field>
+        <Field Name="PaternityLeaveAcc_HREmployeesFormat">
+          <DataField>PaternityLeaveAcc_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="SickLeaveAcc_HREmployees">
+          <DataField>SickLeaveAcc_HREmployees</DataField>
+        </Field>
+        <Field Name="SickLeaveAcc_HREmployeesFormat">
+          <DataField>SickLeaveAcc_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="StudyLeaveAcc_HREmployees">
+          <DataField>StudyLeaveAcc_HREmployees</DataField>
+        </Field>
+        <Field Name="StudyLeaveAcc_HREmployeesFormat">
+          <DataField>StudyLeaveAcc_HREmployeesFormat</DataField>
+        </Field>
+        <Field Name="totalAnnual">
+          <DataField>totalAnnual</DataField>
+        </Field>
+        <Field Name="totalAnnualFormat">
+          <DataField>totalAnnualFormat</DataField>
+        </Field>
+        <Field Name="totalSick">
+          <DataField>totalSick</DataField>
+        </Field>
+        <Field Name="totalSickFormat">
+          <DataField>totalSickFormat</DataField>
+        </Field>
+        <Field Name="totalComp">
+          <DataField>totalComp</DataField>
+        </Field>
+        <Field Name="totalCompFormat">
+          <DataField>totalCompFormat</DataField>
+        </Field>
+        <Field Name="totalMaternity">
+          <DataField>totalMaternity</DataField>
+        </Field>
+        <Field Name="totalMaternityFormat">
+          <DataField>totalMaternityFormat</DataField>
+        </Field>
+        <Field Name="totalPaternity">
+          <DataField>totalPaternity</DataField>
+        </Field>
+        <Field Name="totalPaternityFormat">
+          <DataField>totalPaternityFormat</DataField>
+        </Field>
+        <Field Name="company_Pic">
+          <DataField>company_Pic</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

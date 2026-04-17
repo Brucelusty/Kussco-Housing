@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="CompanyPic">
+          <DataField>CompanyPic</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="No_StandingOrders">
+          <DataField>No_StandingOrders</DataField>
+        </Field>
+        <Field Name="SourceAccountNo_StandingOrders">
+          <DataField>SourceAccountNo_StandingOrders</DataField>
+        </Field>
+        <Field Name="StaffPayrollNo_StandingOrders">
+          <DataField>StaffPayrollNo_StandingOrders</DataField>
+        </Field>
+        <Field Name="AccountName_StandingOrders">
+          <DataField>AccountName_StandingOrders</DataField>
+        </Field>
+        <Field Name="BOSAAccountNo_StandingOrders">
+          <DataField>BOSAAccountNo_StandingOrders</DataField>
+        </Field>
+        <Field Name="EffectiveStartDate_StandingOrders">
+          <DataField>EffectiveStartDate_StandingOrders</DataField>
+        </Field>
+        <Field Name="EndDate_StandingOrders">
+          <DataField>EndDate_StandingOrders</DataField>
+        </Field>
+        <Field Name="Status_StandingOrders">
+          <DataField>Status_StandingOrders</DataField>
+        </Field>
+        <Field Name="Filters">
+          <DataField>Filters</DataField>
+        </Field>
+        <Field Name="TheCount">
+          <DataField>TheCount</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="Amount_StandingOrders">
+          <DataField>Amount_StandingOrders</DataField>
+        </Field>
+        <Field Name="Amount_StandingOrdersFormat">
+          <DataField>Amount_StandingOrdersFormat</DataField>
+        </Field>
+        <Field Name="MemberNo_ReceiptAllocation">
+          <DataField>MemberNo_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="TransactionType_ReceiptAllocation">
+          <DataField>TransactionType_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="LoanNo_ReceiptAllocation">
+          <DataField>LoanNo_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="Amount_ReceiptAllocation">
+          <DataField>Amount_ReceiptAllocation</DataField>
+        </Field>
+        <Field Name="Amount_ReceiptAllocationFormat">
+          <DataField>Amount_ReceiptAllocationFormat</DataField>
+        </Field>
+        <Field Name="AmtReceived">
+          <DataField>AmtReceived</DataField>
+        </Field>
+        <Field Name="AmtReceivedFormat">
+          <DataField>AmtReceivedFormat</DataField>
+        </Field>
+        <Field Name="Variance">
+          <DataField>Variance</DataField>
+        </Field>
+        <Field Name="VarianceFormat">
+          <DataField>VarianceFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -29,7 +29,7 @@ table 50805 "Tranche Register"
         field(3; "Document Date"; Date)
         {
             Caption = 'Document Date';
-            Editable = false;
+            // Editable = false;
         }
         field(4; "Client Code"; Code[40])
         {
@@ -61,6 +61,16 @@ table 50805 "Tranche Register"
             Caption = 'Description';
             // Editable = false;
         }
+        field(10; "Posting Date"; Date)
+        {
+            Caption = 'Posting Date';
+            // Editable = false;
+        }
+        field(11; "Application Date"; Date)
+        {
+            Caption = 'Application Date';
+            Editable = false;
+        }
     }
     keys
     {
@@ -84,7 +94,7 @@ table 50805 "Tranche Register"
             SalesSetup.TestField(SalesSetup."Tranche Nos");
             "Document No" := NoSeriesMgt.GetNextNo(SalesSetup."Tranche Nos");
         end;
-        "Document Date" := Today;
+        "Application Date" := Today;
         "Captured By" := UserId;
 
     end;

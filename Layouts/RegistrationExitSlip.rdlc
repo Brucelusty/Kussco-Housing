@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Payroll_No">
+          <DataField>Payroll_No</DataField>
+        </Field>
+        <Field Name="ID_No_">
+          <DataField>ID_No_</DataField>
+        </Field>
+        <Field Name="burialPermit">
+          <DataField>burialPermit</DataField>
+        </Field>
+        <Field Name="Membership_Status">
+          <DataField>Membership_Status</DataField>
+        </Field>
+        <Field Name="Member_Deposits">
+          <DataField>Member_Deposits</DataField>
+        </Field>
+        <Field Name="Member_DepositsFormat">
+          <DataField>Member_DepositsFormat</DataField>
+        </Field>
+        <Field Name="Current_Shares">
+          <DataField>Current_Shares</DataField>
+        </Field>
+        <Field Name="Current_SharesFormat">
+          <DataField>Current_SharesFormat</DataField>
+        </Field>
+        <Field Name="Shares_Retained">
+          <DataField>Shares_Retained</DataField>
+        </Field>
+        <Field Name="Shares_RetainedFormat">
+          <DataField>Shares_RetainedFormat</DataField>
+        </Field>
+        <Field Name="School_Fees_Shares">
+          <DataField>School_Fees_Shares</DataField>
+        </Field>
+        <Field Name="School_Fees_SharesFormat">
+          <DataField>School_Fees_SharesFormat</DataField>
+        </Field>
+        <Field Name="Total_Loan_Balance">
+          <DataField>Total_Loan_Balance</DataField>
+        </Field>
+        <Field Name="Total_Loan_BalanceFormat">
+          <DataField>Total_Loan_BalanceFormat</DataField>
+        </Field>
+        <Field Name="withdrawalFee">
+          <DataField>withdrawalFee</DataField>
+        </Field>
+        <Field Name="withdrawalFeeFormat">
+          <DataField>withdrawalFeeFormat</DataField>
+        </Field>
+        <Field Name="totalRefund">
+          <DataField>totalRefund</DataField>
+        </Field>
+        <Field Name="totalRefundFormat">
+          <DataField>totalRefundFormat</DataField>
+        </Field>
+        <Field Name="unpaidDividends">
+          <DataField>unpaidDividends</DataField>
+        </Field>
+        <Field Name="unpaidDividendsFormat">
+          <DataField>unpaidDividendsFormat</DataField>
+        </Field>
+        <Field Name="currentLiability">
+          <DataField>currentLiability</DataField>
+        </Field>
+        <Field Name="currentLiabilityFormat">
+          <DataField>currentLiabilityFormat</DataField>
+        </Field>
+        <Field Name="Mobile_Phone_No_">
+          <DataField>Mobile_Phone_No_</DataField>
+        </Field>
+        <Field Name="reasonExit">
+          <DataField>reasonExit</DataField>
+        </Field>
+        <Field Name="regDate">
+          <DataField>regDate</DataField>
+        </Field>
+        <Field Name="Credit">
+          <DataField>Credit</DataField>
+        </Field>
+        <Field Name="CreditFormat">
+          <DataField>CreditFormat</DataField>
+        </Field>
+        <Field Name="Debit">
+          <DataField>Debit</DataField>
+        </Field>
+        <Field Name="DebitFormat">
+          <DataField>DebitFormat</DataField>
+        </Field>
+        <Field Name="Remainder">
+          <DataField>Remainder</DataField>
+        </Field>
+        <Field Name="RemainderFormat">
+          <DataField>RemainderFormat</DataField>
+        </Field>
+        <Field Name="noticeDate">
+          <DataField>noticeDate</DataField>
+        </Field>
+        <Field Name="matureDate">
+          <DataField>matureDate</DataField>
+        </Field>
+        <Field Name="company_Pic">
+          <DataField>company_Pic</DataField>
+        </Field>
+        <Field Name="company_Name">
+          <DataField>company_Name</DataField>
+        </Field>
+        <Field Name="company_Address">
+          <DataField>company_Address</DataField>
+        </Field>
+        <Field Name="company_Phone">
+          <DataField>company_Phone</DataField>
+        </Field>
+        <Field Name="company_Email">
+          <DataField>company_Email</DataField>
+        </Field>
+        <Field Name="company_Motto">
+          <DataField>company_Motto</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

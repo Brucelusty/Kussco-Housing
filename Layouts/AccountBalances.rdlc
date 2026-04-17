@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="companyPicture">
+          <DataField>companyPicture</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyPhoneNo">
+          <DataField>CompanyPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyEmail">
+          <DataField>CompanyEmail</DataField>
+        </Field>
+        <Field Name="Personal_No_">
+          <DataField>Personal_No_</DataField>
+        </Field>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="BOSA_Account_No">
+          <DataField>BOSA_Account_No</DataField>
+        </Field>
+        <Field Name="ID_No_">
+          <DataField>ID_No_</DataField>
+        </Field>
+        <Field Name="Employer_Code">
+          <DataField>Employer_Code</DataField>
+        </Field>
+        <Field Name="Mobile_Phone_No_">
+          <DataField>Mobile_Phone_No_</DataField>
+        </Field>
+        <Field Name="Serial">
+          <DataField>Serial</DataField>
+        </Field>
+        <Field Name="Share">
+          <DataField>Share</DataField>
+        </Field>
+        <Field Name="ShareFormat">
+          <DataField>ShareFormat</DataField>
+        </Field>
+        <Field Name="Bosa">
+          <DataField>Bosa</DataField>
+        </Field>
+        <Field Name="BosaFormat">
+          <DataField>BosaFormat</DataField>
+        </Field>
+        <Field Name="OrdinarySavings">
+          <DataField>OrdinarySavings</DataField>
+        </Field>
+        <Field Name="OrdinarySavingsFormat">
+          <DataField>OrdinarySavingsFormat</DataField>
+        </Field>
+        <Field Name="School_Fees_Shares">
+          <DataField>School_Fees_Shares</DataField>
+        </Field>
+        <Field Name="School_Fees_SharesFormat">
+          <DataField>School_Fees_SharesFormat</DataField>
+        </Field>
+        <Field Name="Chamaa_Savings">
+          <DataField>Chamaa_Savings</DataField>
+        </Field>
+        <Field Name="Chamaa_SavingsFormat">
+          <DataField>Chamaa_SavingsFormat</DataField>
+        </Field>
+        <Field Name="Jibambe_Savings">
+          <DataField>Jibambe_Savings</DataField>
+        </Field>
+        <Field Name="Jibambe_SavingsFormat">
+          <DataField>Jibambe_SavingsFormat</DataField>
+        </Field>
+        <Field Name="Wezesha_Savings">
+          <DataField>Wezesha_Savings</DataField>
+        </Field>
+        <Field Name="Wezesha_SavingsFormat">
+          <DataField>Wezesha_SavingsFormat</DataField>
+        </Field>
+        <Field Name="Fixed_Deposit">
+          <DataField>Fixed_Deposit</DataField>
+        </Field>
+        <Field Name="Fixed_DepositFormat">
+          <DataField>Fixed_DepositFormat</DataField>
+        </Field>
+        <Field Name="Mdosi_Junior_Bal">
+          <DataField>Mdosi_Junior_Bal</DataField>
+        </Field>
+        <Field Name="Mdosi_Junior_BalFormat">
+          <DataField>Mdosi_Junior_BalFormat</DataField>
+        </Field>
+        <Field Name="Mdosi_Junior">
+          <DataField>Mdosi_Junior</DataField>
+        </Field>
+        <Field Name="Mdosi_JuniorFormat">
+          <DataField>Mdosi_JuniorFormat</DataField>
+        </Field>
+        <Field Name="Pension_Akiba">
+          <DataField>Pension_Akiba</DataField>
+        </Field>
+        <Field Name="Pension_AkibaFormat">
+          <DataField>Pension_AkibaFormat</DataField>
+        </Field>
+        <Field Name="Business_Account">
+          <DataField>Business_Account</DataField>
+        </Field>
+        <Field Name="Business_AccountFormat">
+          <DataField>Business_AccountFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

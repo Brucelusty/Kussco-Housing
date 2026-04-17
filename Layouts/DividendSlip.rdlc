@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>462ce7c0-0c64-4c79-8266-bc0cfb87c153</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Member_No">
+          <DataField>Member_No</DataField>
+        </Field>
+        <Field Name="GrossDividends">
+          <DataField>GrossDividends</DataField>
+        </Field>
+        <Field Name="GrossDividendsFormat">
+          <DataField>GrossDividendsFormat</DataField>
+        </Field>
+        <Field Name="WithholdingTaxDividends">
+          <DataField>WithholdingTaxDividends</DataField>
+        </Field>
+        <Field Name="WithholdingTaxDividendsFormat">
+          <DataField>WithholdingTaxDividendsFormat</DataField>
+        </Field>
+        <Field Name="NetDividends">
+          <DataField>NetDividends</DataField>
+        </Field>
+        <Field Name="NetDividendsFormat">
+          <DataField>NetDividendsFormat</DataField>
+        </Field>
+        <Field Name="GrossInterestOnDeposits">
+          <DataField>GrossInterestOnDeposits</DataField>
+        </Field>
+        <Field Name="GrossInterestOnDepositsFormat">
+          <DataField>GrossInterestOnDepositsFormat</DataField>
+        </Field>
+        <Field Name="WithholdingTaxIntOnDeposit">
+          <DataField>WithholdingTaxIntOnDeposit</DataField>
+        </Field>
+        <Field Name="WithholdingTaxIntOnDepositFormat">
+          <DataField>WithholdingTaxIntOnDepositFormat</DataField>
+        </Field>
+        <Field Name="NetInterestOnDeposits">
+          <DataField>NetInterestOnDeposits</DataField>
+        </Field>
+        <Field Name="NetInterestOnDepositsFormat">
+          <DataField>NetInterestOnDepositsFormat</DataField>
+        </Field>
+        <Field Name="MemberName">
+          <DataField>MemberName</DataField>
+        </Field>
+        <Field Name="FilterVaue">
+          <DataField>FilterVaue</DataField>
+        </Field>
+        <Field Name="FilterVaueFormat">
+          <DataField>FilterVaueFormat</DataField>
+        </Field>
+        <Field Name="CompanyInformationPic">
+          <DataField>CompanyInformationPic</DataField>
+        </Field>
+        <Field Name="CompanyInformationName">
+          <DataField>CompanyInformationName</DataField>
+        </Field>
+        <Field Name="Date">
+          <DataField>Date</DataField>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>5.73959in</Height>
+        <Style />
+      </Body>
+      <Width>9.07167in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>4</NumberOfColumns>
+      <NumberOfRows>2</NumberOfRows>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+</Report>
