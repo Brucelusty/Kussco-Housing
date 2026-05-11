@@ -45,10 +45,14 @@ Page 50109 "Membership Application Card"
                     begin
                         Joint2DetailsVisible := false;
                         Joint3DetailsVisible := false;
+                        CorporateDetailsVisible := false;
 
                         if Rec."Account Category" = Rec."account category"::Joint then begin
                             Joint2DetailsVisible := true;
                             Joint3DetailsVisible := true;
+                        end;
+                        if Rec."Account Category" = Rec."account category"::Corporate then begin
+                            CorporateDetailsVisible := true;
                         end;
                         if Rec."Account Category" = Rec."account category"::Individual then begin
                             Joint2DetailsVisible := false;
@@ -74,6 +78,32 @@ Page 50109 "Membership Application Card"
                         // Visible = Joint2DetailsVisible;
                         OptionCaption = ' ,Any to Sign,Two to Sign,Three to Sign,Sole Signatory';
                         Editable = IDNoEditable;
+                    }
+                    field("Registration No"; Rec."Registration No")
+                    {
+                        Editable = IDNoEditable;
+                        ShowMandatory = true;
+                        Caption = 'Registration Number';
+                    }
+                    field("Copy of KRA Pin"; Rec."Copy of KRA Pin")
+                    {
+                        Editable = IDNoEditable;
+                        ShowMandatory = true;
+                    }
+                }
+                group("Corporate Account Details")
+                {
+                    Visible = CorporateDetailsVisible;
+                    field("Registration No2"; Rec."Registration No")
+                    {
+                        Editable = IDNoEditable;
+                        ShowMandatory = true;
+                        Caption = 'Registration Number';
+                    }
+                    field("Copy of KRA Pin2"; Rec."Copy of KRA Pin")
+                    {
+                        Editable = IDNoEditable;
+                        ShowMandatory = true;
                     }
                 }
                 field("ID No."; Rec."ID No.")
@@ -2800,10 +2830,14 @@ Page 50109 "Membership Application Card"
 
         Joint2DetailsVisible := false;
         Joint3DetailsVisible := false;
+        CorporateDetailsVisible := false;
 
         if Rec."Account Category" = Rec."account category"::Joint then begin
             Joint2DetailsVisible := true;
             Joint3DetailsVisible := true;
+        end;
+        if Rec."Account Category" = Rec."account category"::Corporate then begin
+            CorporateDetailsVisible := true;
         end;
         if Rec."Account Category" = Rec."account category"::Individual then begin
             Joint2DetailsVisible := false;
@@ -2815,6 +2849,7 @@ Page 50109 "Membership Application Card"
         RejoiningDetailsVisible := false;
         shocontract := false;
         Joint2DetailsVisible := false;
+        CorporateDetailsVisible := false;
         ClassATierVisible := false;
         ClassBTierVisible := false;
         ClassCTierVisible := false;
@@ -3125,6 +3160,7 @@ Page 50109 "Membership Application Card"
         ClassFATierVisible: Boolean;
         ClassFBTierVisible: Boolean;
         ClassFCTierVisible: Boolean;
+        CorporateDetailsVisible: Boolean;
         sacco: Record "Sacco General Set-Up";
 
 
