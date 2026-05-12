@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="Fixed_Deposit_No_">
+          <DataField>Fixed_Deposit_No_</DataField>
+        </Field>
+        <Field Name="Member_No">
+          <DataField>Member_No</DataField>
+        </Field>
+        <Field Name="Member_Name">
+          <DataField>Member_Name</DataField>
+        </Field>
+        <Field Name="Fixed_Deposit_Account_No">
+          <DataField>Fixed_Deposit_Account_No</DataField>
+        </Field>
+        <Field Name="Amount_to_Fix">
+          <DataField>Amount_to_Fix</DataField>
+        </Field>
+        <Field Name="Amount_to_FixFormat">
+          <DataField>Amount_to_FixFormat</DataField>
+        </Field>
+        <Field Name="Fixed_Deposit_Start_Date">
+          <DataField>Fixed_Deposit_Start_Date</DataField>
+        </Field>
+        <Field Name="Fixed_Duration">
+          <DataField>Fixed_Duration</DataField>
+        </Field>
+        <Field Name="Application_Date">
+          <DataField>Application_Date</DataField>
+        </Field>
+        <Field Name="FD_Interest_Rate">
+          <DataField>FD_Interest_Rate</DataField>
+        </Field>
+        <Field Name="FD_Interest_RateFormat">
+          <DataField>FD_Interest_RateFormat</DataField>
+        </Field>
+        <Field Name="Created_On">
+          <DataField>Created_On</DataField>
+        </Field>
+        <Field Name="Created_By">
+          <DataField>Created_By</DataField>
+        </Field>
+        <Field Name="Date_Effected">
+          <DataField>Date_Effected</DataField>
+        </Field>
+        <Field Name="Fixed_Deposit_Type">
+          <DataField>Fixed_Deposit_Type</DataField>
+        </Field>
+        <Field Name="Expected_Interest_Earned">
+          <DataField>Expected_Interest_Earned</DataField>
+        </Field>
+        <Field Name="Expected_Interest_EarnedFormat">
+          <DataField>Expected_Interest_EarnedFormat</DataField>
+        </Field>
+        <Field Name="Expected_Tax_After_Term_Period">
+          <DataField>Expected_Tax_After_Term_Period</DataField>
+        </Field>
+        <Field Name="Expected_Tax_After_Term_PeriodFormat">
+          <DataField>Expected_Tax_After_Term_PeriodFormat</DataField>
+        </Field>
+        <Field Name="Expected_Net_After_Term_Period">
+          <DataField>Expected_Net_After_Term_Period</DataField>
+        </Field>
+        <Field Name="Expected_Net_After_Term_PeriodFormat">
+          <DataField>Expected_Net_After_Term_PeriodFormat</DataField>
+        </Field>
+        <Field Name="FD_Maturity_Date">
+          <DataField>FD_Maturity_Date</DataField>
+        </Field>
+        <Field Name="Maturity_Instructions">
+          <DataField>Maturity_Instructions</DataField>
+        </Field>
+        <Field Name="Closed">
+          <DataField>Closed</DataField>
+        </Field>
+        <Field Name="FD_Closed_By">
+          <DataField>FD_Closed_By</DataField>
+        </Field>
+        <Field Name="FD_Closed_On">
+          <DataField>FD_Closed_On</DataField>
+        </Field>
+        <Field Name="company_Name">
+          <DataField>company_Name</DataField>
+        </Field>
+        <Field Name="company_Picture">
+          <DataField>company_Picture</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

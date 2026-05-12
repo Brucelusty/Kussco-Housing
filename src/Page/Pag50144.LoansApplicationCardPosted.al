@@ -689,6 +689,12 @@ Page 50144 "Loans Application Card(Posted)"
             }
             group("Auctioneer Details")
             {
+                field("Disburesment Type"; Rec."Disburesment Type")
+                {
+                }
+                field("Paying Bank Account No"; Rec."Paying Bank Account No")
+                {
+                }
                 field("Loan Auctioneer"; Rec."Loan Auctioneer")
                 {
                 }

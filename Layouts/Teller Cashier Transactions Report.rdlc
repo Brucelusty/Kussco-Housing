@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="CashierID">
+          <DataField>CashierID</DataField>
+        </Field>
+        <Field Name="Transaction_No">
+          <DataField>Transaction_No</DataField>
+        </Field>
+        <Field Name="Transaction_accNo">
+          <DataField>Transaction_accNo</DataField>
+        </Field>
+        <Field Name="Transaction_accName">
+          <DataField>Transaction_accName</DataField>
+        </Field>
+        <Field Name="Transaction_tType_">
+          <DataField>Transaction_tType_</DataField>
+        </Field>
+        <Field Name="Type__Transactions">
+          <DataField>Type__Transactions</DataField>
+        </Field>
+        <Field Name="Transaction_Cashier">
+          <DataField>Transaction_Cashier</DataField>
+        </Field>
+        <Field Name="Trans_tDate_">
+          <DataField>Trans_tDate_</DataField>
+        </Field>
+        <Field Name="Trans_tTime_">
+          <DataField>Trans_tTime_</DataField>
+        </Field>
+        <Field Name="Transaction_Amount">
+          <DataField>Transaction_Amount</DataField>
+        </Field>
+        <Field Name="Transaction_AmountFormat">
+          <DataField>Transaction_AmountFormat</DataField>
+        </Field>
+        <Field Name="Transaction_accDesc">
+          <DataField>Transaction_accDesc</DataField>
+        </Field>
+        <Field Name="Transaction_accType">
+          <DataField>Transaction_accType</DataField>
+        </Field>
+        <Field Name="Transaction_authRequirement">
+          <DataField>Transaction_authRequirement</DataField>
+        </Field>
+        <Field Name="trans_Date">
+          <DataField>trans_Date</DataField>
+        </Field>
+        <Field Name="opening_Bal">
+          <DataField>opening_Bal</DataField>
+        </Field>
+        <Field Name="opening_BalFormat">
+          <DataField>opening_BalFormat</DataField>
+        </Field>
+        <Field Name="closing_Bal">
+          <DataField>closing_Bal</DataField>
+        </Field>
+        <Field Name="closing_BalFormat">
+          <DataField>closing_BalFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

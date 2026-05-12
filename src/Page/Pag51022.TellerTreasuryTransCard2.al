@@ -59,12 +59,12 @@ page 51022 "Teller & Treasury Trans Card2"
         }
         area(Factboxes)
         {
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Payment Receipts';
-                SubPageLink = "Table ID" = const(Database::"Treasury Transactions"), "No." = field("No");
-                Enabled = pettyCash;
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Payment Receipts';
+            //     SubPageLink = "Table ID" = const(Database::"Treasury Transactions"), "No." = field("No");
+            //     Enabled = pettyCash;
+            // }
         }
     }
 

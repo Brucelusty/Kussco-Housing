@@ -94,11 +94,11 @@ page 50037 "Funeral Rider Processing Card"
                 Caption = 'Member Statistics FactBox';
                 SubPageLink = "No." = field("Member No.");
             }
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Burial Permit Slip';
-                SubPageLink = "Table ID" = const(Database::"Funeral Rider Processing"), "No." = field("FR No.");
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Burial Permit Slip';
+            //     SubPageLink = "Table ID" = const(Database::"Funeral Rider Processing"), "No." = field("FR No.");
+            // }
         }
     }
     

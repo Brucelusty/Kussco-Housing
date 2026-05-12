@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No_">
+          <DataField>No_</DataField>
+        </Field>
+        <Field Name="Name">
+          <DataField>Name</DataField>
+        </Field>
+        <Field Name="Current_Shares">
+          <DataField>Current_Shares</DataField>
+        </Field>
+        <Field Name="Current_SharesFormat">
+          <DataField>Current_SharesFormat</DataField>
+        </Field>
+        <Field Name="School_Fees_Shares">
+          <DataField>School_Fees_Shares</DataField>
+        </Field>
+        <Field Name="School_Fees_SharesFormat">
+          <DataField>School_Fees_SharesFormat</DataField>
+        </Field>
+        <Field Name="Payroll_No">
+          <DataField>Payroll_No</DataField>
+        </Field>
+        <Field Name="Mobile_Phone_No">
+          <DataField>Mobile_Phone_No</DataField>
+        </Field>
+        <Field Name="E_Mail">
+          <DataField>E_Mail</DataField>
+        </Field>
+        <Field Name="regDate">
+          <DataField>regDate</DataField>
+        </Field>
+        <Field Name="noticeDate">
+          <DataField>noticeDate</DataField>
+        </Field>
+        <Field Name="essBal">
+          <DataField>essBal</DataField>
+        </Field>
+        <Field Name="essBalFormat">
+          <DataField>essBalFormat</DataField>
+        </Field>
+        <Field Name="depositsBal">
+          <DataField>depositsBal</DataField>
+        </Field>
+        <Field Name="depositsBalFormat">
+          <DataField>depositsBalFormat</DataField>
+        </Field>
+        <Field Name="DocNo">
+          <DataField>DocNo</DataField>
+        </Field>
+        <Field Name="depositType">
+          <DataField>depositType</DataField>
+        </Field>
+        <Field Name="notPaid">
+          <DataField>notPaid</DataField>
+        </Field>
+        <Field Name="partial">
+          <DataField>partial</DataField>
+        </Field>
+        <Field Name="full">
+          <DataField>full</DataField>
+        </Field>
+        <Field Name="companyInfo_Name">
+          <DataField>companyInfo_Name</DataField>
+        </Field>
+        <Field Name="companyInfo_Pic">
+          <DataField>companyInfo_Pic</DataField>
+        </Field>
+        <Field Name="companyInfo_Address">
+          <DataField>companyInfo_Address</DataField>
+        </Field>
+        <Field Name="companyInfo_Motto">
+          <DataField>companyInfo_Motto</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

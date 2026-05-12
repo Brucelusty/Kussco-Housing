@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FDNo_FixedDep">
+          <DataField>FDNo_FixedDep</DataField>
+        </Field>
+        <Field Name="AccountNo_FixedDep">
+          <DataField>AccountNo_FixedDep</DataField>
+        </Field>
+        <Field Name="AccountName_FixedDep">
+          <DataField>AccountName_FixedDep</DataField>
+        </Field>
+        <Field Name="FdDuration_FixedDep">
+          <DataField>FdDuration_FixedDep</DataField>
+        </Field>
+        <Field Name="Duration_FixedDep">
+          <DataField>Duration_FixedDep</DataField>
+        </Field>
+        <Field Name="Amount_FixedDep">
+          <DataField>Amount_FixedDep</DataField>
+        </Field>
+        <Field Name="Amount_FixedDepFormat">
+          <DataField>Amount_FixedDepFormat</DataField>
+        </Field>
+        <Field Name="InterestRate_FixedDep">
+          <DataField>InterestRate_FixedDep</DataField>
+        </Field>
+        <Field Name="InterestRate_FixedDepFormat">
+          <DataField>InterestRate_FixedDepFormat</DataField>
+        </Field>
+        <Field Name="AmountAftermaturity_FixedDep">
+          <DataField>AmountAftermaturity_FixedDep</DataField>
+        </Field>
+        <Field Name="AmountAftermaturity_FixedDepFormat">
+          <DataField>AmountAftermaturity_FixedDepFormat</DataField>
+        </Field>
+        <Field Name="MaturityDate_FixedDep">
+          <DataField>MaturityDate_FixedDep</DataField>
+        </Field>
+        <Field Name="IDNO_FixedDep">
+          <DataField>IDNO_FixedDep</DataField>
+        </Field>
+        <Field Name="PostedDate_FixedDep">
+          <DataField>PostedDate_FixedDep</DataField>
+        </Field>
+        <Field Name="postedtime_FixedDep">
+          <DataField>postedtime_FixedDep</DataField>
+        </Field>
+        <Field Name="WithholdingTax_FixedDep">
+          <DataField>WithholdingTax_FixedDep</DataField>
+        </Field>
+        <Field Name="WithholdingTax_FixedDepFormat">
+          <DataField>WithholdingTax_FixedDepFormat</DataField>
+        </Field>
+        <Field Name="interestLessTax_FixedDep">
+          <DataField>interestLessTax_FixedDep</DataField>
+        </Field>
+        <Field Name="interestLessTax_FixedDepFormat">
+          <DataField>interestLessTax_FixedDepFormat</DataField>
+        </Field>
+        <Field Name="InterestEarned_FixedDep">
+          <DataField>InterestEarned_FixedDep</DataField>
+        </Field>
+        <Field Name="InterestEarned_FixedDepFormat">
+          <DataField>InterestEarned_FixedDepFormat</DataField>
+        </Field>
+        <Field Name="Instructions_FixedDep">
+          <DataField>Instructions_FixedDep</DataField>
+        </Field>
+        <Field Name="FDAcc">
+          <DataField>FDAcc</DataField>
+        </Field>
+        <Field Name="CompName">
+          <DataField>CompName</DataField>
+        </Field>
+        <Field Name="CompAddress">
+          <DataField>CompAddress</DataField>
+        </Field>
+        <Field Name="CompCity">
+          <DataField>CompCity</DataField>
+        </Field>
+        <Field Name="CompPicture">
+          <DataField>CompPicture</DataField>
+        </Field>
+        <Field Name="FixedDate_FixedDep">
+          <DataField>FixedDate_FixedDep</DataField>
+        </Field>
+        <Field Name="FixedBy_FixedDep">
+          <DataField>FixedBy_FixedDep</DataField>
+        </Field>
+        <Field Name="NumberText">
+          <DataField>NumberText</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

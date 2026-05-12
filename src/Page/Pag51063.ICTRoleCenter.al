@@ -3364,21 +3364,21 @@ page 51063 "ICT Role Center" // Administration role
                     {
                         Caption = 'Trial Balance';
                         Image = "Report";
-                        RunObject = Codeunit "Run Template Trial Balance";
+                        // RunObject = Codeunit "Run Template Trial Balance";
                         ToolTip = 'Open a spreadsheet that shows a summary trial balance by account.';
                     }
                     action(ExcelTemplateAgedAccPay)
                     {
                         Caption = 'Aged Accounts Payable';
                         Image = "Report";
-                        RunObject = Codeunit "Run Template Aged Acc. Pay.";
+                        // RunObject = Codeunit "Run Template Aged Acc. Pay.";
                         ToolTip = 'Open a spreadsheet that shows a list of aged remaining balances for each vendor by period.';
                     }
                     action(ExcelTemplateAgedAccRec)
                     {
                         Caption = 'Aged Accounts Receivable';
                         Image = "Report";
-                        RunObject = Codeunit "Run Template Aged Acc. Rec.";
+                        // RunObject = Codeunit "Run Template Aged Acc. Rec.";
                         ToolTip = 'Open a spreadsheet that shows when customer payments are due or overdue by period.';
                     }
                 }

@@ -1351,11 +1351,11 @@ Page 50670 "Member Account Card View"
             {
                 Caption = 'Account Notes';
             }
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Key Documents';
-                SubPageLink = "Table ID" = const(Database::Vendor), "No." = field("No.");
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Key Documents';
+            //     SubPageLink = "Table ID" = const(Database::Vendor), "No." = field("No.");
+            // }
             part(Control1000116; "Vendor Child Picture")
             {
                 Caption = 'Child Picture';

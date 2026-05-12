@@ -36,11 +36,11 @@ page 51087 "Uploaded Sacco Meetings Card"
         }
         area(Factboxes)
         {
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Attachments';
-                SubPageLink = "Table ID" = const(Database::"Sacco Meetings"), "No." = field("Meeting No");
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Attachments';
+            //     SubPageLink = "Table ID" = const(Database::"Sacco Meetings"), "No." = field("Meeting No");
+            // }
         }
     }
     

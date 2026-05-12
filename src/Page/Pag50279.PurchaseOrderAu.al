@@ -837,13 +837,13 @@ page 50279 "Purchase OrderAu"
                 SubPageLink = "No." = FIELD("No."),
                               "Document Type" = FIELD("Document Type");
             }
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Attachments';
-                SubPageLink = "Table ID" = CONST(38),
-                              "No." = FIELD("No."),
-                              "Document Type" = FIELD("Document Type");
-            }
+          //  part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Attachments';
+            //     SubPageLink = "Table ID" = CONST(38),
+            //                   "No." = FIELD("No."),
+            //                   "Document Type" = FIELD("Document Type");
+            // }
             part(Control23; "Pending Approval FactBox")
             {
                 SubPageLink = "Table ID" = CONST(38),

@@ -1006,11 +1006,11 @@ Page 50107 "Member Account Card"
             {
                 Caption = 'Account Notes';
             }
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Key Documents';
-                SubPageLink = "Table ID" = const(Database::Customer), "No." = field("No.");
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Key Documents';
+            //     SubPageLink = "Table ID" = const(Database::Customer), "No." = field("No.");
+            // }
             part(Control1000000107; "Member Picture-Uploaded")
             {
                 Caption = 'Picture';

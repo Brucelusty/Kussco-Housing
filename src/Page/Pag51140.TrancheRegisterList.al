@@ -5,6 +5,7 @@ page 51140 "Tranche Register List"
     SourceTable = "Tranche Register";
     Caption = 'Tranche Register';
     CardPageId = "Tranche Register Card";
+    SourceTableView = where(Posted = filter(false));
 
     layout
     {

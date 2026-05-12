@@ -75,11 +75,11 @@ Page 50310 "Employer Card"
         }
         area(FactBoxes)
         {
-            part("Doc Attachments"; "Document Attachment Factbox")
-            {
-                Caption = 'Employer Attachments';
-                SubPageLink = "Table ID" = const(Database::"Employers Register"), "No." = field("Employer Code");
-            }
+            // part("Doc Attachments"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Employer Attachments';
+            //     SubPageLink = "Table ID" = const(Database::"Employers Register"), "No." = field("Employer Code");
+            // }
         }
     }
 

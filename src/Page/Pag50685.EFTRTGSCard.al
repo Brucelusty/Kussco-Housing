@@ -78,11 +78,11 @@ Page 50685 "EFT/RTGS Card"
 
         area(Factboxes)
         {
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Attachments';
-                SubPageLink = "Table ID" = const(Database::"EFT/RTGS Header"), "No." = field(No);
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Attachments';
+            //     SubPageLink = "Table ID" = const(Database::"EFT/RTGS Header"), "No." = field(No);
+            // }
         }
     }
 

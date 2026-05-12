@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="TransactionDate">
+          <DataField>TransactionDate</DataField>
+        </Field>
+        <Field Name="TransactionType">
+          <DataField>TransactionType</DataField>
+        </Field>
+        <Field Name="FromAccount">
+          <DataField>FromAccount</DataField>
+        </Field>
+        <Field Name="FromAccountUser">
+          <DataField>FromAccountUser</DataField>
+        </Field>
+        <Field Name="ToAccount">
+          <DataField>ToAccount</DataField>
+        </Field>
+        <Field Name="ToAccountUser">
+          <DataField>ToAccountUser</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="OneTHousand">
+          <DataField>OneTHousand</DataField>
+        </Field>
+        <Field Name="OneTHousandFormat">
+          <DataField>OneTHousandFormat</DataField>
+        </Field>
+        <Field Name="FiveHundred">
+          <DataField>FiveHundred</DataField>
+        </Field>
+        <Field Name="FiveHundredFormat">
+          <DataField>FiveHundredFormat</DataField>
+        </Field>
+        <Field Name="TwoHundred">
+          <DataField>TwoHundred</DataField>
+        </Field>
+        <Field Name="TwoHundredFormat">
+          <DataField>TwoHundredFormat</DataField>
+        </Field>
+        <Field Name="OneHundred">
+          <DataField>OneHundred</DataField>
+        </Field>
+        <Field Name="OneHundredFormat">
+          <DataField>OneHundredFormat</DataField>
+        </Field>
+        <Field Name="FiftyShillings">
+          <DataField>FiftyShillings</DataField>
+        </Field>
+        <Field Name="FiftyShillingsFormat">
+          <DataField>FiftyShillingsFormat</DataField>
+        </Field>
+        <Field Name="FortySHillings">
+          <DataField>FortySHillings</DataField>
+        </Field>
+        <Field Name="FortySHillingsFormat">
+          <DataField>FortySHillingsFormat</DataField>
+        </Field>
+        <Field Name="TwentySHillings">
+          <DataField>TwentySHillings</DataField>
+        </Field>
+        <Field Name="TwentySHillingsFormat">
+          <DataField>TwentySHillingsFormat</DataField>
+        </Field>
+        <Field Name="TenShillings">
+          <DataField>TenShillings</DataField>
+        </Field>
+        <Field Name="TenShillingsFormat">
+          <DataField>TenShillingsFormat</DataField>
+        </Field>
+        <Field Name="FiveShillings">
+          <DataField>FiveShillings</DataField>
+        </Field>
+        <Field Name="FiveShillingsFormat">
+          <DataField>FiveShillingsFormat</DataField>
+        </Field>
+        <Field Name="OneShilling">
+          <DataField>OneShilling</DataField>
+        </Field>
+        <Field Name="OneShillingFormat">
+          <DataField>OneShillingFormat</DataField>
+        </Field>
+        <Field Name="OneCent">
+          <DataField>OneCent</DataField>
+        </Field>
+        <Field Name="OneCentFormat">
+          <DataField>OneCentFormat</DataField>
+        </Field>
+        <Field Name="OneTHousandDen">
+          <DataField>OneTHousandDen</DataField>
+        </Field>
+        <Field Name="FiveHundredDen">
+          <DataField>FiveHundredDen</DataField>
+        </Field>
+        <Field Name="TwoHundredDen">
+          <DataField>TwoHundredDen</DataField>
+        </Field>
+        <Field Name="OneHundredDen">
+          <DataField>OneHundredDen</DataField>
+        </Field>
+        <Field Name="FiftyShillingsDen">
+          <DataField>FiftyShillingsDen</DataField>
+        </Field>
+        <Field Name="FortySHillingsDen">
+          <DataField>FortySHillingsDen</DataField>
+        </Field>
+        <Field Name="TwentySHillingsDen">
+          <DataField>TwentySHillingsDen</DataField>
+        </Field>
+        <Field Name="TenShillingsDen">
+          <DataField>TenShillingsDen</DataField>
+        </Field>
+        <Field Name="FiveShillingsDen">
+          <DataField>FiveShillingsDen</DataField>
+        </Field>
+        <Field Name="OneShillingDen">
+          <DataField>OneShillingDen</DataField>
+        </Field>
+        <Field Name="OneCentDen">
+          <DataField>OneCentDen</DataField>
+        </Field>
+        <Field Name="TotalDen">
+          <DataField>TotalDen</DataField>
+        </Field>
+        <Field Name="TotalAmount">
+          <DataField>TotalAmount</DataField>
+        </Field>
+        <Field Name="TotalAmountFormat">
+          <DataField>TotalAmountFormat</DataField>
+        </Field>
+        <Field Name="RegisterDate">
+          <DataField>RegisterDate</DataField>
+        </Field>
+        <Field Name="FromDate">
+          <DataField>FromDate</DataField>
+        </Field>
+        <Field Name="BFBalance">
+          <DataField>BFBalance</DataField>
+        </Field>
+        <Field Name="BFBalanceFormat">
+          <DataField>BFBalanceFormat</DataField>
+        </Field>
+        <Field Name="RunningBalance">
+          <DataField>RunningBalance</DataField>
+        </Field>
+        <Field Name="RunningBalanceFormat">
+          <DataField>RunningBalanceFormat</DataField>
+        </Field>
+        <Field Name="OneTHousandCD">
+          <DataField>OneTHousandCD</DataField>
+        </Field>
+        <Field Name="OneTHousandCDFormat">
+          <DataField>OneTHousandCDFormat</DataField>
+        </Field>
+        <Field Name="FiveHundredCD">
+          <DataField>FiveHundredCD</DataField>
+        </Field>
+        <Field Name="FiveHundredCDFormat">
+          <DataField>FiveHundredCDFormat</DataField>
+        </Field>
+        <Field Name="TwoHundredCD">
+          <DataField>TwoHundredCD</DataField>
+        </Field>
+        <Field Name="TwoHundredCDFormat">
+          <DataField>TwoHundredCDFormat</DataField>
+        </Field>
+        <Field Name="OneHundredCD">
+          <DataField>OneHundredCD</DataField>
+        </Field>
+        <Field Name="OneHundredCDFormat">
+          <DataField>OneHundredCDFormat</DataField>
+        </Field>
+        <Field Name="FiftyShillingsCD">
+          <DataField>FiftyShillingsCD</DataField>
+        </Field>
+        <Field Name="FiftyShillingsCDFormat">
+          <DataField>FiftyShillingsCDFormat</DataField>
+        </Field>
+        <Field Name="FortySHillingsCD">
+          <DataField>FortySHillingsCD</DataField>
+        </Field>
+        <Field Name="FortySHillingsCDFormat">
+          <DataField>FortySHillingsCDFormat</DataField>
+        </Field>
+        <Field Name="TwentySHillingsCD">
+          <DataField>TwentySHillingsCD</DataField>
+        </Field>
+        <Field Name="TwentySHillingsCDFormat">
+          <DataField>TwentySHillingsCDFormat</DataField>
+        </Field>
+        <Field Name="TenShillingsCD">
+          <DataField>TenShillingsCD</DataField>
+        </Field>
+        <Field Name="TenShillingsCDFormat">
+          <DataField>TenShillingsCDFormat</DataField>
+        </Field>
+        <Field Name="FiveShillingsCD">
+          <DataField>FiveShillingsCD</DataField>
+        </Field>
+        <Field Name="FiveShillingsCDFormat">
+          <DataField>FiveShillingsCDFormat</DataField>
+        </Field>
+        <Field Name="OneShillingCD">
+          <DataField>OneShillingCD</DataField>
+        </Field>
+        <Field Name="OneShillingCDFormat">
+          <DataField>OneShillingCDFormat</DataField>
+        </Field>
+        <Field Name="OneCentCD">
+          <DataField>OneCentCD</DataField>
+        </Field>
+        <Field Name="OneCentCDFormat">
+          <DataField>OneCentCDFormat</DataField>
+        </Field>
+        <Field Name="OneTHousandBF">
+          <DataField>OneTHousandBF</DataField>
+        </Field>
+        <Field Name="OneTHousandBFFormat">
+          <DataField>OneTHousandBFFormat</DataField>
+        </Field>
+        <Field Name="FiveHundredBF">
+          <DataField>FiveHundredBF</DataField>
+        </Field>
+        <Field Name="FiveHundredBFFormat">
+          <DataField>FiveHundredBFFormat</DataField>
+        </Field>
+        <Field Name="TwoHundredBF">
+          <DataField>TwoHundredBF</DataField>
+        </Field>
+        <Field Name="TwoHundredBFFormat">
+          <DataField>TwoHundredBFFormat</DataField>
+        </Field>
+        <Field Name="OneHundredBF">
+          <DataField>OneHundredBF</DataField>
+        </Field>
+        <Field Name="OneHundredBFFormat">
+          <DataField>OneHundredBFFormat</DataField>
+        </Field>
+        <Field Name="FiftyShillingsBF">
+          <DataField>FiftyShillingsBF</DataField>
+        </Field>
+        <Field Name="FiftyShillingsBFFormat">
+          <DataField>FiftyShillingsBFFormat</DataField>
+        </Field>
+        <Field Name="FortySHillingsBF">
+          <DataField>FortySHillingsBF</DataField>
+        </Field>
+        <Field Name="FortySHillingsBFFormat">
+          <DataField>FortySHillingsBFFormat</DataField>
+        </Field>
+        <Field Name="TwentySHillingsBF">
+          <DataField>TwentySHillingsBF</DataField>
+        </Field>
+        <Field Name="TwentySHillingsBFFormat">
+          <DataField>TwentySHillingsBFFormat</DataField>
+        </Field>
+        <Field Name="TenShillingsBF">
+          <DataField>TenShillingsBF</DataField>
+        </Field>
+        <Field Name="TenShillingsBFFormat">
+          <DataField>TenShillingsBFFormat</DataField>
+        </Field>
+        <Field Name="FiveShillingsBF">
+          <DataField>FiveShillingsBF</DataField>
+        </Field>
+        <Field Name="FiveShillingsBFFormat">
+          <DataField>FiveShillingsBFFormat</DataField>
+        </Field>
+        <Field Name="OneShillingBF">
+          <DataField>OneShillingBF</DataField>
+        </Field>
+        <Field Name="OneShillingBFFormat">
+          <DataField>OneShillingBFFormat</DataField>
+        </Field>
+        <Field Name="OneCentBF">
+          <DataField>OneCentBF</DataField>
+        </Field>
+        <Field Name="OneCentBFFormat">
+          <DataField>OneCentBFFormat</DataField>
+        </Field>
+        <Field Name="OneTHousandBFAf">
+          <DataField>OneTHousandBFAf</DataField>
+        </Field>
+        <Field Name="OneTHousandBFAfFormat">
+          <DataField>OneTHousandBFAfFormat</DataField>
+        </Field>
+        <Field Name="FiveHundredBFAf">
+          <DataField>FiveHundredBFAf</DataField>
+        </Field>
+        <Field Name="FiveHundredBFAfFormat">
+          <DataField>FiveHundredBFAfFormat</DataField>
+        </Field>
+        <Field Name="TwoHundredBFAf">
+          <DataField>TwoHundredBFAf</DataField>
+        </Field>
+        <Field Name="TwoHundredBFAfFormat">
+          <DataField>TwoHundredBFAfFormat</DataField>
+        </Field>
+        <Field Name="OneHundredBFAf">
+          <DataField>OneHundredBFAf</DataField>
+        </Field>
+        <Field Name="OneHundredBFAfFormat">
+          <DataField>OneHundredBFAfFormat</DataField>
+        </Field>
+        <Field Name="FiftyShillingsBFAf">
+          <DataField>FiftyShillingsBFAf</DataField>
+        </Field>
+        <Field Name="FiftyShillingsBFAfFormat">
+          <DataField>FiftyShillingsBFAfFormat</DataField>
+        </Field>
+        <Field Name="FortySHillingsBFAf">
+          <DataField>FortySHillingsBFAf</DataField>
+        </Field>
+        <Field Name="FortySHillingsBFAfFormat">
+          <DataField>FortySHillingsBFAfFormat</DataField>
+        </Field>
+        <Field Name="TwentySHillingsBFAf">
+          <DataField>TwentySHillingsBFAf</DataField>
+        </Field>
+        <Field Name="TwentySHillingsBFAfFormat">
+          <DataField>TwentySHillingsBFAfFormat</DataField>
+        </Field>
+        <Field Name="TenShillingsBFAf">
+          <DataField>TenShillingsBFAf</DataField>
+        </Field>
+        <Field Name="TenShillingsBFAfFormat">
+          <DataField>TenShillingsBFAfFormat</DataField>
+        </Field>
+        <Field Name="FiveShillingsBFAf">
+          <DataField>FiveShillingsBFAf</DataField>
+        </Field>
+        <Field Name="FiveShillingsBFAfFormat">
+          <DataField>FiveShillingsBFAfFormat</DataField>
+        </Field>
+        <Field Name="OneShillingBFAf">
+          <DataField>OneShillingBFAf</DataField>
+        </Field>
+        <Field Name="OneShillingBFAfFormat">
+          <DataField>OneShillingBFAfFormat</DataField>
+        </Field>
+        <Field Name="OneCentBFAf">
+          <DataField>OneCentBFAf</DataField>
+        </Field>
+        <Field Name="OneCentBFAfFormat">
+          <DataField>OneCentBFAfFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

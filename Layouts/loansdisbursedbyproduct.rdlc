@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="AppraisedBy_LoansRegister">
+          <DataField>AppraisedBy_LoansRegister</DataField>
+        </Field>
+        <Field Name="DisbursedBy_LoansRegister">
+          <DataField>DisbursedBy_LoansRegister</DataField>
+        </Field>
+        <Field Name="Approved_By">
+          <DataField>Approved_By</DataField>
+        </Field>
+        <Field Name="LoanNo_LoansRegister">
+          <DataField>LoanNo_LoansRegister</DataField>
+        </Field>
+        <Field Name="ApplicationDate_LoansRegister">
+          <DataField>ApplicationDate_LoansRegister</DataField>
+        </Field>
+        <Field Name="LoanProductType_LoansRegister">
+          <DataField>LoanProductType_LoansRegister</DataField>
+        </Field>
+        <Field Name="ClientCode_LoansRegister">
+          <DataField>ClientCode_LoansRegister</DataField>
+        </Field>
+        <Field Name="ClientName_LoansRegister">
+          <DataField>ClientName_LoansRegister</DataField>
+        </Field>
+        <Field Name="RequestedAmount_LoansRegister">
+          <DataField>RequestedAmount_LoansRegister</DataField>
+        </Field>
+        <Field Name="RequestedAmount_LoansRegisterFormat">
+          <DataField>RequestedAmount_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegister">
+          <DataField>ApprovedAmount_LoansRegister</DataField>
+        </Field>
+        <Field Name="ApprovedAmount_LoansRegisterFormat">
+          <DataField>ApprovedAmount_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansRegister">
+          <DataField>OutstandingBalance_LoansRegister</DataField>
+        </Field>
+        <Field Name="OutstandingBalance_LoansRegisterFormat">
+          <DataField>OutstandingBalance_LoansRegisterFormat</DataField>
+        </Field>
+        <Field Name="CapturedBy_LoansRegister">
+          <DataField>CapturedBy_LoansRegister</DataField>
+        </Field>
+        <Field Name="Top_Up_Amount">
+          <DataField>Top_Up_Amount</DataField>
+        </Field>
+        <Field Name="Top_Up_AmountFormat">
+          <DataField>Top_Up_AmountFormat</DataField>
+        </Field>
+        <Field Name="companyPicture">
+          <DataField>companyPicture</DataField>
+        </Field>
+        <Field Name="CompanyName">
+          <DataField>CompanyName</DataField>
+        </Field>
+        <Field Name="CompanyAddress2">
+          <DataField>CompanyAddress2</DataField>
+        </Field>
+        <Field Name="CompanyAddress">
+          <DataField>CompanyAddress</DataField>
+        </Field>
+        <Field Name="CompanyPhoneNo">
+          <DataField>CompanyPhoneNo</DataField>
+        </Field>
+        <Field Name="CompanyEmail">
+          <DataField>CompanyEmail</DataField>
+        </Field>
+        <Field Name="Serial">
+          <DataField>Serial</DataField>
+        </Field>
+        <Field Name="LoanProductTypeName_LoansRegister">
+          <DataField>LoanProductTypeName_LoansRegister</DataField>
+        </Field>
+        <Field Name="LoanDisbursementDate_LoansRegister">
+          <DataField>LoanDisbursementDate_LoansRegister</DataField>
+        </Field>
+        <Field Name="PostingDate_LoansRegister">
+          <DataField>PostingDate_LoansRegister</DataField>
+        </Field>
+        <Field Name="Employer_Code">
+          <DataField>Employer_Code</DataField>
+        </Field>
+        <Field Name="Manin_Sector_Name">
+          <DataField>Manin_Sector_Name</DataField>
+        </Field>
+        <Field Name="Sector_Specific_Name">
+          <DataField>Sector_Specific_Name</DataField>
+        </Field>
+        <Field Name="SubSector_Name">
+          <DataField>SubSector_Name</DataField>
+        </Field>
+        <Field Name="New_Repayment_Period">
+          <DataField>New_Repayment_Period</DataField>
+        </Field>
+        <Field Name="Max__Installments">
+          <DataField>Max__Installments</DataField>
+        </Field>
+        <Field Name="Staff_No">
+          <DataField>Staff_No</DataField>
+        </Field>
+        <Field Name="netDisbursed">
+          <DataField>netDisbursed</DataField>
+        </Field>
+        <Field Name="netDisbursedFormat">
+          <DataField>netDisbursedFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,197 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="AccountName">
+          <DataField>AccountName</DataField>
+        </Field>
+        <Field Name="AccountNo">
+          <DataField>AccountNo</DataField>
+        </Field>
+        <Field Name="AccountType">
+          <DataField>AccountType</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="DateEntered">
+          <DataField>DateEntered</DataField>
+        </Field>
+        <Field Name="DocumentNo">
+          <DataField>DocumentNo</DataField>
+        </Field>
+        <Field Name="EmployerCode">
+          <DataField>EmployerCode</DataField>
+        </Field>
+        <Field Name="EnteredBy">
+          <DataField>EnteredBy</DataField>
+        </Field>
+        <Field Name="No">
+          <DataField>No</DataField>
+        </Field>
+        <Field Name="NoSeries">
+          <DataField>NoSeries</DataField>
+        </Field>
+        <Field Name="Posted">
+          <DataField>Posted</DataField>
+        </Field>
+        <Field Name="PostedBy">
+          <DataField>PostedBy</DataField>
+        </Field>
+        <Field Name="Postingdate">
+          <DataField>Postingdate</DataField>
+        </Field>
+        <Field Name="Remarks">
+          <DataField>Remarks</DataField>
+        </Field>
+        <Field Name="ScheduledAmount">
+          <DataField>ScheduledAmount</DataField>
+        </Field>
+        <Field Name="ScheduledAmountFormat">
+          <DataField>ScheduledAmountFormat</DataField>
+        </Field>
+        <Field Name="SystemCreatedAt">
+          <DataField>SystemCreatedAt</DataField>
+        </Field>
+        <Field Name="SystemCreatedBy">
+          <DataField>SystemCreatedBy</DataField>
+        </Field>
+        <Field Name="SystemId">
+          <DataField>SystemId</DataField>
+        </Field>
+        <Field Name="SystemModifiedAt">
+          <DataField>SystemModifiedAt</DataField>
+        </Field>
+        <Field Name="SystemModifiedBy">
+          <DataField>SystemModifiedBy</DataField>
+        </Field>
+        <Field Name="TimeEntered">
+          <DataField>TimeEntered</DataField>
+        </Field>
+        <Field Name="TotalCount">
+          <DataField>TotalCount</DataField>
+        </Field>
+        <Field Name="TransactionType">
+          <DataField>TransactionType</DataField>
+        </Field>
+        <Field Name="LineAmount">
+          <DataField>LineAmount</DataField>
+        </Field>
+        <Field Name="LineAmountFormat">
+          <DataField>LineAmountFormat</DataField>
+        </Field>
+        <Field Name="Member_No">
+          <DataField>Member_No</DataField>
+        </Field>
+        <Field Name="Account_No_">
+          <DataField>Account_No_</DataField>
+        </Field>
+        <Field Name="Expected_Amount">
+          <DataField>Expected_Amount</DataField>
+        </Field>
+        <Field Name="Expected_AmountFormat">
+          <DataField>Expected_AmountFormat</DataField>
+        </Field>
+        <Field Name="Amount_Deducted">
+          <DataField>Amount_Deducted</DataField>
+        </Field>
+        <Field Name="Amount_DeductedFormat">
+          <DataField>Amount_DeductedFormat</DataField>
+        </Field>
+        <Field Name="InterestDeducted">
+          <DataField>InterestDeducted</DataField>
+        </Field>
+        <Field Name="InterestDeductedFormat">
+          <DataField>InterestDeductedFormat</DataField>
+        </Field>
+        <Field Name="ExpectedInterest">
+          <DataField>ExpectedInterest</DataField>
+        </Field>
+        <Field Name="ExpectedInterestFormat">
+          <DataField>ExpectedInterestFormat</DataField>
+        </Field>
+        <Field Name="PrincipleDeducted">
+          <DataField>PrincipleDeducted</DataField>
+        </Field>
+        <Field Name="PrincipleDeductedFormat">
+          <DataField>PrincipleDeductedFormat</DataField>
+        </Field>
+        <Field Name="ExpectedPrinciple">
+          <DataField>ExpectedPrinciple</DataField>
+        </Field>
+        <Field Name="ExpectedPrincipleFormat">
+          <DataField>ExpectedPrincipleFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="FD_No">
+          <DataField>FD_No</DataField>
+        </Field>
+        <Field Name="Account_No">
+          <DataField>Account_No</DataField>
+        </Field>
+        <Field Name="Account_Name">
+          <DataField>Account_Name</DataField>
+        </Field>
+        <Field Name="Upon_Maturity">
+          <DataField>Upon_Maturity</DataField>
+        </Field>
+        <Field Name="FD_Certificate_No">
+          <DataField>FD_Certificate_No</DataField>
+        </Field>
+        <Field Name="Fd_Duration">
+          <DataField>Fd_Duration</DataField>
+        </Field>
+        <Field Name="Fixed_Date">
+          <DataField>Fixed_Date</DataField>
+        </Field>
+        <Field Name="Fixed_By">
+          <DataField>Fixed_By</DataField>
+        </Field>
+        <Field Name="MaturityDate">
+          <DataField>MaturityDate</DataField>
+        </Field>
+        <Field Name="Amount">
+          <DataField>Amount</DataField>
+        </Field>
+        <Field Name="AmountFormat">
+          <DataField>AmountFormat</DataField>
+        </Field>
+        <Field Name="Interest_Rate">
+          <DataField>Interest_Rate</DataField>
+        </Field>
+        <Field Name="Interest_RateFormat">
+          <DataField>Interest_RateFormat</DataField>
+        </Field>
+        <Field Name="Interest_Earned">
+          <DataField>Interest_Earned</DataField>
+        </Field>
+        <Field Name="Interest_EarnedFormat">
+          <DataField>Interest_EarnedFormat</DataField>
+        </Field>
+        <Field Name="interestLessTax">
+          <DataField>interestLessTax</DataField>
+        </Field>
+        <Field Name="interestLessTaxFormat">
+          <DataField>interestLessTaxFormat</DataField>
+        </Field>
+        <Field Name="Amount_After_maturity">
+          <DataField>Amount_After_maturity</DataField>
+        </Field>
+        <Field Name="Amount_After_maturityFormat">
+          <DataField>Amount_After_maturityFormat</DataField>
+        </Field>
+        <Field Name="Revoked_Date">
+          <DataField>Revoked_Date</DataField>
+        </Field>
+        <Field Name="Revoked_By">
+          <DataField>Revoked_By</DataField>
+        </Field>
+        <Field Name="inclusiveText">
+          <DataField>inclusiveText</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>

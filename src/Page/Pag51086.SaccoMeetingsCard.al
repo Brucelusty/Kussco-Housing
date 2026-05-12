@@ -76,12 +76,12 @@ page 51086 "Sacco Meetings Card"
         }
         area(Factboxes)
         {
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Attachments';
-                SubPageLink = "Table ID" = const(Database::"Sacco Meetings"), "No." = field("Meeting No");
-                Enabled = not (complete);
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Attachments';
+            //     SubPageLink = "Table ID" = const(Database::"Sacco Meetings"), "No." = field("Meeting No");
+            //     Enabled = not (complete);
+            // }
         }
     }
     

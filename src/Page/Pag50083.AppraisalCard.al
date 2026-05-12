@@ -138,11 +138,11 @@ Page 50083 "Appraisal Card"
             {
                 SubPageLink = "No." = field("Employee No.");
             }
-            part("Attached Documents"; "Document Attachment Factbox")
-            {
-                Caption = 'Staff Appraisal Attachments';
-                SubPageLink = "Table ID" = const(Database::"HR Appraisal Header"), "No." = field("No.");
-            }
+            // part("Attached Documents"; "Document Attachment Factbox")
+            // {
+            //     Caption = 'Staff Appraisal Attachments';
+            //     SubPageLink = "Table ID" = const(Database::"HR Appraisal Header"), "No." = field("No.");
+            // }
         }
     }
 

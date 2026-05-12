@@ -849,7 +849,7 @@ page 50277 "Purch. Invoice SubformVer2"
 
                         trigger OnAction()
                         begin
-                            ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByEvent)
+                            // ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByEvent)
                         end;
                     }
                     action(Period)
@@ -860,7 +860,7 @@ page 50277 "Purch. Invoice SubformVer2"
 
                         trigger OnAction()
                         begin
-                            ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByPeriod)
+                            // ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByPeriod)
                         end;
                     }
                     action(Variant)
@@ -871,7 +871,7 @@ page 50277 "Purch. Invoice SubformVer2"
 
                         trigger OnAction()
                         begin
-                            ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByVariant)
+                            // ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByVariant)
                         end;
                     }
                     action(Location)
@@ -883,7 +883,7 @@ page 50277 "Purch. Invoice SubformVer2"
 
                         trigger OnAction()
                         begin
-                            ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByLocation)
+                            // ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByLocation)
                         end;
                     }
                     action(Lot)
@@ -905,7 +905,7 @@ page 50277 "Purch. Invoice SubformVer2"
 
                         trigger OnAction()
                         begin
-                            ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByBOM)
+                            // ItemAvailFormsMgt.ShowItemAvailFromPurchLine(Rec, ItemAvailFormsMgt.ByBOM)
                         end;
                     }
                 }
